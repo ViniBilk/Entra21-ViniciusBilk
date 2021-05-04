@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 8</title>
+</head>
+<body>
+    <script>
+    /*  8) Escreva um script que receba três valores A, B, C. Faça as comparações necessárias para exibir
+    na tela o maior valor entre os três.
+    Entrada:         Saída:
+    10, 12, 2        O maior número é 12
+
+    12, 2, 10        O maior número é 12
+
+    2, 10, 12        O maior número é 12
+    */
+   let numeroA = Number(prompt("Numero A"))
+   let numeroB = Number(prompt("Numero B"))
+   let numeroC = Number(prompt("Numero C"))
+
+   if ( numeroA > numeroB){
+       if (numeroA > numeroC){
+       console.log(`O maior número é ${numeroA}`)
+       }
+   }
+
+   if ( numeroB > numeroA){
+       if (numeroB > numeroC){
+       console.log(`O maior número é ${numeroB}`)
+       }
+   }
+   
+   if ( numeroC > numeroB){
+       if (numeroC > numeroA){
+       console.log(`O maior número é ${numeroC}`)
+       }
+   }
+
+
+
+    </script>
+</body>
+</html>
