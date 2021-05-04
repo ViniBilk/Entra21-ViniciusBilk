@@ -1,0 +1,58 @@
+Exercício 17
+<script>
+        let numero = Number(prompt("Digite o número"))
+        finalNumero = numero - 1
+        console.log(`O antecessor de ${numero} é ${finalNumero}`)
+</script>
+
+Exercício 18
+
+<script>
+    let raio = Number(prompt("Digite o raio da esfera"))
+    const PI = 3.14159
+    let volume = (4/3) * PI * raio**3
+    console.log(`O volume dessa esfera é ${volume.toFixed(2)}`)
+</script>
+Exercício 19
+   <script>
+    let altura = Number(prompt("Altura do Triângulo"))
+    let base = Number(prompt("Base do Triângulo"))
+    let area = (altura * base) / 2
+    console.log(`Entrada:       Saida:\nAltura: ${altura}       Área = ${area}\nBase: ${base}`)
+</script>
+Exercício 20
+<script>
+    let preco = Number(prompt("Preço do produto"))
+    let desconto = Number(prompt("Valor do desconto"))
+    let valorDesconto = (desconto * preco) / 100
+    let total = preco - valorDesconto
+    console.log(`Entrada:              Saida:\nPreço Total:${preco}       Preço Final:${total.toFixed(2)}\nDesconto:${desconto}           Valor Descontado:${valorDesconto}`)
+    alert("Segundo Produto")
+    preco = Number(prompt("Preço do produto"))
+    desconto = Number(prompt("Valor do desconto"))
+    valorDesconto = (desconto * preco) / 100
+    total = preco - valorDesconto
+    console.log(`Preço Total:${preco}       Preço Final:${total.toFixed(2)}\nDesconto:${desconto}           Valor Descontado:${valorDesconto}`)
+</script>
+Exercício 21
+
+<script>
+
+    let user = prompt(`Nome do Usuário:`,"João")
+    const SALARIO = Number(500)
+    let vendas = Number(prompt("Valor Vendido(em dinheiro)"))
+    let valor_comiss = (vendas * 15) / 100
+    let valorFinal = SALARIO + valor_comiss
+    console.log (`Entrada:             SAIDA:\nNome:${user}            Salário Final:${valorFinal}`)
+    console.log (`Salário(fixo):${SALARIO}\nValor de vendas:${vendas}`)
+    
+    alert("Segundo Usuário:")
+    let user2 = prompt(`Nome Do Usuário:`,"Pedro")
+    const SALARIO2 = Number(700)
+    let valorFinal2 = SALARIO2 + valor_comiss
+    vendas = Number(prompt("Valor Vendido(em dinheiro)"))
+    console.log (`Entrada:             SAIDA:\nNome:${user2}            Salário Final:${valorFinal2}`)
+    console.log (`Salário(fixo):${SALARIO2}\nValor de vendas:${vendas}`)
+
+
+</script>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 21</title>
+</head>
+<body>
+    <script>
+    /*    21) Faça um programa que leia o nome de um vendedor, o seu salário fixo e o total de vendas efetuadas por ele no mês (em dinheiro). 
+    Sabendo que este vendedor ganha 15% de comissão sobre suas vendas efetuadas, informar o total a receber no final do mês, com duas casas decimais.
+    Entrada:             SAIDA:
+    JOAO                 TOTAL = R$ 684.54
+    500.00
+    1230.30
+
+    PEDRO                SAIDA:
+    700.00               TOTAL = R$ 700.00
+    0.00*/
+    let user = prompt(`Nome do Usuário:`,"João")
+    const SALARIO = Number(500)
+    let vendas = Number(prompt("Valor Vendido(em dinheiro)"))
+    let valor_comiss = (vendas * 15) / 100
+    let valorFinal = SALARIO + valor_comiss
+    console.log (`Entrada:             SAIDA:\nNome:${user}            Salário Final:${valorFinal}`)
+    console.log (`Salário(fixo):${SALARIO}\nValor de vendas:${vendas}`)
+    
+    alert("Segundo Usuário:")
+    let user2 = prompt(`Nome Do Usuário:`,"Pedro")
+    const SALARIO2 = Number(700)
+    let valorFinal2 = SALARIO2 + valor_comiss
+    vendas = Number(prompt("Valor Vendido(em dinheiro)"))
+    console.log (`Entrada:             SAIDA:\nNome:${user2}            Salário Final:${valorFinal2}`)
+    console.log (`Salário(fixo):${SALARIO2}\nValor de vendas:${vendas}`)
+
+
+    </script>
+</body>
+</html>

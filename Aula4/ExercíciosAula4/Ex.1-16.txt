@@ -1,0 +1,161 @@
+Exercício 1
+
+<script>
+        alert ("Oi, meu nome é Vinícius")
+        console.log ("Oi, meu nome é Vinícius")
+</script>
+
+Exercício 2
+
+<script>
+        console.log ("Cadastro de Funcionários:\n1) Cadastrar funcionário \n2) Listar funcionários \n3) Editar funcionário \n4) Deletar funcionário \n5) Sair ")
+</script>   
+
+Exercício 3
+<script>
+        let admin = ("")
+        let nome =("João")
+        admin = nome
+        console.log(nome)
+</script>
+
+Exercício 4
+<script>
+       
+        let nome = prompt ("Qual seu nome?")
+        let idade = prompt ("Qual sua Idade?")
+        let peso = prompt ("Qual seu Peso?")
+        let altura = prompt ("Qual sua Altura?")
+        let telefone =prompt ("Qual seu Telefone?")
+        console.log (` Bem-vindo ${nome}\n Sua Idade:${idade}\n Seu Peso:${peso}\n Sua altura:${altura}\n Seu Telefone:${telefone}`)
+</script>
+
+Exercício 5
+
+<script>
+    let titulo = ("O Pequeno Príncipe")
+    let edição = 237
+    let autor = ("Marcos Barbosa")
+    let data_de_Publicação = ("1952")
+    console.log (` Título : ${titulo}\n Edição : ${edição}\n Autor : ${autor}\n Data de Publicação : ${data_de_Publicação} `)
+</script>
+
+Exercício 6
+
+<script>
+    let dataNascimeto = 16
+    let quantFilhos = 0
+    let user = ("Vini")
+</script>
+
+Exercício 7
+
+<script>
+    let nome = "João"
+    console.log(`Olá ${1}`) // Olá 1
+    console.log(`Olá ${"nome"}`) // Olá nome
+    alert(`Olá ${nome}`) // Olá João
+</script>
+
+Exercício 8
+
+<script>
+    let x = 10
+    let y = 8
+    let area = (x * y) / 2 + 3 ** 4
+    console.log(area)
+    Qual é a saida de dados (output)?*/
+    let x = 10
+    let y = 8
+    let area = (x * y) / 2 + 3 ** 4
+    console.log(area)//121
+</script>
+
+Exercício 9
+
+<script>
+    let a = 2
+    let x = 1 + (a *= 2)
+    console.log(a, x)*/
+    let a = 2
+    let x = 1 + (a *= 2)
+    console.log(a, x)// a = 4  x = 5
+</script>
+
+Exercício 10
+
+<script>
+    A) "" + 1 + 0 // = 10
+    B) "" - 1 + 0 // = -1
+    C) 6 / "3" // = 2
+    D) "2" * "3" // = 6
+    E) 4 + 5 + "px" // = 9px
+    F) "$" + 4 + 5 // = $45
+    G) "4" - 2 // = 2 */
+</script>
+
+Exercício 11
+
+<script>
+    let altura = prompt ("Qual a altura do quadrado?")
+    let largura = prompt ("Qual a largura do quadrado?")
+    altura = Number(altura)
+    largura = Number(largura)
+    let perimetro = (altura *2) + (largura *2)
+    console.log (perimetro)
+</script>
+
+Exercício 12
+
+<script>
+        let x = prompt ("Primeiro Número")
+        let y = prompt ("Segundo Número")
+        x = Number(x)
+        y = Number(y)
+        let z = x + y
+        console.log (`O Resultado da soma foi: ${z} `)
+</script>
+
+Exercício 13
+<script>
+      let x = prompt("Primeira Nota")
+      let y = prompt("Segunda Nota")
+      x = Number(x)
+      y = Number (y)
+      let z = (x + y) / 2
+      alert(`A média é : ${z}`)
+</script>
+
+Exercício 14
+ <script>
+        let x = prompt("Primeiro Número")
+        let y = prompt("Segundo Número")
+        let z = prompt("Terceiro Número")
+        x = Number(x)
+        y = Number(y)
+        z = Number(z)
+        x2 = x**2
+        y2 = y**2
+        z2 = z**2
+        console.log(`${x} Ao quadrado é ${x2}\n${y} Ao quadrado é ${y2}\n${z} Ao quadrado é ${z2}`)
+</script>
+
+Exercício 15
+
+<script>
+    let a = 10
+    let b = 20
+    let aux = a
+    a = b
+    b = aux
+    console.log(a,b)
+</script>
+
+Exercício 16
+
+<script>
+    let quantMeses = prompt("Quantidade e meses")
+    let dias = quantMeses * 30
+    console.log(`A quantidade de dias é ${dias}`)
+</script>
+

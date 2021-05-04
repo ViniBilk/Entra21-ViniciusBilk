@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 20</title>
+</head>
+<body>
+    <script>
+     /*   20) Construa um script que leia o preço de um produto, o percentual de desconto e calcule 
+    o valor a pagar e o valor do desconto.
+    Entrada:       Saida:
+    10             TOTAL = 9 
+    10             DESCONTO = 10
+
+    100            TOTAL = 80
+    20             DESCONTO = 20*/
+    let preco = Number(prompt("Preço do produto"))
+    let desconto = Number(prompt("Valor do desconto"))
+    let valorDesconto = (desconto * preco) / 100
+    let total = preco - valorDesconto
+    console.log(`Entrada:              Saida:\nPreço Total:${preco}       Preço Final:${total.toFixed(2)}\nDesconto:${desconto}           Valor Descontado:${valorDesconto}`)
+    alert("Segundo Produto")
+    preco = Number(prompt("Preço do produto"))
+    desconto = Number(prompt("Valor do desconto"))
+    valorDesconto = (desconto * preco) / 100
+    total = preco - valorDesconto
+    console.log(`Preço Total:${preco}       Preço Final:${total.toFixed(2)}\nDesconto:${desconto}           Valor Descontado:${valorDesconto}`)
+
+    </script>
+</body>
+</html>

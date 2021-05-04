@@ -1,0 +1,32 @@
+
+Criar pasta
+
+Abrir git bash
+
+git init - inicia o repositório
+
+code . - abrir o c/ ou o code
+
+git add <arquivoa adicionar>
+
+git status - verificar status dos arquivos
+
+git commit -m "Commitc Inicial" - o que eu fiz até agora no projeto
+
+git log - ver commit's salvos
+
+git config --global user.name "Vinícius Bilk" - configurar nome do usuario
+
+git config --global --list - verificar os dados modificados
+
+git add . - salvar todos os arquivos
+
+git restore --staged <file> - remover arquivo
+
+git branch -M main
+
+git remote add origin https://github.com/ViniBilk/Entra21-ViniciusBilk.git
+
+git clone <url> - clonar repositorio
+
+git pull - baixar arquivos atualizados do repositório
