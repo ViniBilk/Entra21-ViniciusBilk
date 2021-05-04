@@ -1,8 +1,7 @@
 Exercício 17
 <script>
         let numero = Number(prompt("Digite o número"))
-        finalNumero = numero - 1
-        console.log(`O antecessor de ${numero} é ${finalNumero}`)
+        console.log(`O antecessor de ${numero} é ${numero - 1}\nE o sucessor ${numero + 1}`)
 </script>
 
 Exercício 18
