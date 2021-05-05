@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 13</title>
+</head>
+<body>
+    <script>
+        /*13) Leia um numero. Se o numero for positivo imprima a raiz quadrada desse número. Do contrário,
+    imprima o numero ao quadrado.*/
+    let numero = Number(prompt("Numero"))
+    if (numero > 0){
+        numero = Math.sqrt(numero)
+        console.log(`A raiz deste número é ${numero}`)
+    }else if(numero < 0){
+        numero = numero ** 2
+        console.log(`Este numero ao quadrado é ${numero}`)
+    }
+    </script>
+</body>
+</html>
