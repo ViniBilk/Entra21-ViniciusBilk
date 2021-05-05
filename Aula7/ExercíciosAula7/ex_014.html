@@ -10,8 +10,16 @@
         /*14) Leia o salario de um trabalhador e o valor da prestação de um empréstimo. Se a prestaçao
     for maior que 20% do salário imprima: “empréstimo não concedido”, caso contrario imprima:
     “empréstimo concedido”.*/
-    let salario = Number(prompt("Qual o Salário?"))
-    
+         let salario = Number(prompt("Qual o Salário?",1000))
+         let prestacao = Number(prompt("Qual é a Prestação?",200))
+         let porcentagem = (100 * prestacao) / salario
+        if (porcentagem > 20){
+         console.log("Empréstimo não concedido")
+        }else{
+         console.log("Empréstimo concedido")
+        }
+
+
     </script>
 </body>
 </html>

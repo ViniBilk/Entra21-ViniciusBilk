@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 17</title>
+</head>
+<body>
+    <script>
+        //17) Faça um script que leia três números e mostre-os em ordem decrescente.
+        let numero1 = Number(prompt("Numero 1"))
+        let numero2 = Number(prompt("Numero 2"))
+        let numero3 = Number(prompt("Numero 3"))  
+
+        if (numero1 > numero2 && numero1 > numero3){
+                if (numero2 > numero3){
+                    console.log(`${numero3},${numero2},${numero1}`)
+                }else{
+                    console.log(`${numero2},${numero3},${numero1}`)
+                }
+            }
+            if (numero2 > numero1 && numero2 > numero3){
+                if (numero1 > numero3){
+                    console.log(`${numero3},${numero1},${numero2}`)
+                }else{
+                    console.log(`${numero1},${numero3},${numero2}`)
+                }
+            }
+            if (numero3 > numero1 && numero3 > numero2){
+                if (numero1 > numero2){
+                    console.log(`${numero2},${numero1},${numero3}`)
+                }else{
+                    console.log(`${numero1},${numero2},${numero3}`)
+                }
+            }
+
+
+    </script>
+</body>
+</html>

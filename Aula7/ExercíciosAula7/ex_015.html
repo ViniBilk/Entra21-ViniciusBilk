@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 15</title>
+</head>
+<body>
+    <script>
+    /*15) Desenvolva um programa que recebe do usuário o placar de um jogo de futebol (os gols de cada time) e 
+    informe se o resultado foi um empate, a vitória do primeiro time ou do segundo time.*/
+    let primeiroTime = Number(prompt("Quantidade de Gols Time 1"))
+    let segundoTime = Number (prompt("Quantidade de Gols time 2"))
+    if (primeiroTime > segundoTime){
+        console.log(`Primeiro time venceu de ${primeiroTime} a ${segundoTime}`)
+    }else if(primeiroTime == segundoTime){
+        console.log(`Empatou ficou ${primeiroTime} a ${segundoTime}`)
+    }else if(segundoTime > primeiroTime){
+        console.log(`Segundo time venceu de ${segundoTime} a ${primeiroTime}`)
+    }
+    </script>
+</body>
+</html>
