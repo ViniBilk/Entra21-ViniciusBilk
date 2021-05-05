@@ -7,8 +7,26 @@
 </head>
 <body>
     <script>
-     // 21) Usando o comando switch, faça um script que pergunte em que turno você estuda. Peça para digitar M-matutino ou V-Vespertino ou N- Noturno. 
+     // 21) Usando o comando switch, faça um script que pergunte em que turno você estuda. Peça para digitar 
+     //M-matutino ou V-Vespertino ou N- Noturno. 
     //Imprima a mensagem "Bom Dia!", "Boa Tarde!" ou "Boa Noite!" ou "Valor Inválido!", conforme o caso.
+
+    alert("Responda com:\nM-matutino\nV-Vespertino\nN- Noturno")
+    let turno = prompt("Em qual turno você estuda?")
+    switch(turno){
+        case "M":
+        console.log("Bom Dia")
+        break
+        case "V":
+        console.log("Bom Tarde")
+        break
+        case "N":
+        console.log("Bom Noite")
+        break
+        default:
+        console.log("Valor Inválido")
+        break
+    }
     </script>
 </body>
 </html>

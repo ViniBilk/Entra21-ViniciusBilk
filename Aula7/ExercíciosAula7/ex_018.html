@@ -11,10 +11,10 @@
        //uma pessoa e diga se ela pode doar sangue ou não. 
        //Use o operador lógicos OU (||).
        let idade = Number(prompt("Qual sua idade?"))
-       if (idade >= 18 && idade <= 67){
-           console.log("Pode Doar")
-       }else{
+       if (idade < 18 || idade > 67){
            console.log("Não pode Doar")
+       }else{
+           console.log("Pode Doar")
        }
     </script>
 </body>
