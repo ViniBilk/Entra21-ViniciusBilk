@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 4</title>
+</head>
+<body>
+    <script>
+    // 4) Faça um script utilizando o for, que permita ao usuário fazer três contas de subtração. 
+    // Para isso peça ao usuário dois números a cada iteração do loop e mostre na tela o resultado
+    // da operação. (Faça o teste de mesa)
+    // Entrada:                Saída:
+    // 1                       1 - 2 = -1
+    // 2                       4 - 3 = 1
+    // 4                       9 - 5 = 4                       
+    // 3
+    // 9
+    // 5
+    // ----------------------------------
+    // 10                      10 - 5 = 5
+    // 5                       2 - 3 = -1
+    // 2                       3 - 1 = 2
+    // 3
+    // 3
+    // 1
+    
+    for(let i = 0; i < 3;i++){
+        let numero1 = +prompt("Digite o primeiro número")
+        let numero2 = +prompt("Digite o segundo número")
+
+        let subtracao = numero1 - numero2
+
+        console.log(`${numero1} - ${numero2} = ${subtracao}`)
+
+    }
+    </script>
+</body>
+</html>
