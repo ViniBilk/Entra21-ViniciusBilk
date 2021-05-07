@@ -10,11 +10,11 @@
         //16) Desenvolva um programa que receba do usuário a sua idade e informe a situação de voto
         // dele ("Não precisa votar", "Voto opcional", "Voto obrigatório").
         let idade = Number(prompt("Qual sua idade?"))
-        if (idade < 16){
+        if (idade < 16 && idade > 65){
             console.log("Não precisa votar")
         }else if(idade >= 16 && idade < 18){
             console.log("Voto opcional")
-        }else if(idade >= 18){
+        }else if(idade >= 18 && idade < 65){
             console.log("Voto obrigatório")
         }
     </script>
