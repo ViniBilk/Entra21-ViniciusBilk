@@ -23,16 +23,36 @@
                 i++         
                 continue              
             } else
-                soma += (`${i}`)   
-                i++
                 
-                if ((i + 1) <= numero) {
-                    soma += (', ')   
+                if (soma == "") {
+                    soma += (`${i}`)  
+                } else {
+                    soma += (`, ${i}`)
                 }
+                
+                i++
             }
 
            
             console.log(`${soma} `)
+
+
+            // while(i <= numero) { 
+            
+            // if (i % 2 == 0) { 
+            //     i++         
+            //     continue              
+            // } else
+            //     soma += (`${i}`)   
+            //     i++
+                
+            //     if ((i + 1) <= numero) {
+            //         soma += (', ')   
+            //     }
+            // }
+
+           
+            // console.log(`${soma} `)   
     </script>
 </body>
 </html>
