@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 15) A prefeitura de uma cidade fez uma pesquisa entre seus habitantes, coletando dados sobre o salário e número
+    // de filhos. A prefeitura deseja saber:
+    // a) média do salário da população
+    // b) média do número de filhos
+    // c) maior salário
+    // Crie um script que leia as informações necessários do usuário enquanto o salário digitado não for negativo. 
+    // Após isso informe as informações solicitadas.
+    // Entrada:                Saída:
+    // 3000                    Média salarial: 3000
+    // 3                       Média de filhos: 1.67
+    // 2000                    Maior salário: 4000
+    // 1
+    // 4000
+    // 1
+    // -100
+
+
+
+        let somaFilhos = 0
+        let somaSalario = 0
+        let mediaFilhos = 0
+        let mediaSalario = 0
+        let maiorSalario = 0
+    while(true){
+        let salario = +prompt("Digite o salário")   
+        if (salario < 0){
+            break
+        } else { 
+            let quant_Filhos = +prompt("Digite a quantidade de Filhos")
+            somaFilhos += quant_Filhos
+            mediaFilhos++
+            somaSalario += salario
+            mediaSalario++
+
+            if (salario >= salario){
+               let maiorSalario = salario
+            }
+
+
+
+        }
+    }
+
+    console.log(`Média Salarial: ${somaSalario / mediaSalario}\nMédia Filhos: ${somaFilhos / mediaFilhos.toFixed(2)}\nMaior Salário: ${maiorSalario}`)
+    </script>
+</body>
+</html>

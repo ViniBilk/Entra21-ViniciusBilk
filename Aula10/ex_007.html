@@ -17,42 +17,42 @@
         let numero = prompt("Numero")
         let soma = ""
         let i = 0
-        while(i <= numero) { 
+        // while(i <= numero) { 
+            
+        //     if (i % 2 == 0) { 
+        //         i++         
+        //         continue              
+        //     } else
+                
+        //         if (soma == "") {
+        //             soma += (`${i}`)  
+        //         } else {
+        //             soma += (`, ${i}`)
+        //         }
+                
+        //         i++
+        //     }
+
+           
+        //     console.log(`${soma} `)
+
+
+            while(i <= numero) { 
             
             if (i % 2 == 0) { 
                 i++         
                 continue              
             } else
-                
-                if (soma == "") {
-                    soma += (`${i}`)  
-                } else {
-                    soma += (`, ${i}`)
-                }
-                
+                soma += (`${i}`)   
                 i++
+                
+                if ((i + 1) <= numero) {
+                    soma += (', ')   
+                }
             }
 
            
-            console.log(`${soma} `)
-
-
-            // while(i <= numero) { 
-            
-            // if (i % 2 == 0) { 
-            //     i++         
-            //     continue              
-            // } else
-            //     soma += (`${i}`)   
-            //     i++
-                
-            //     if ((i + 1) <= numero) {
-            //         soma += (', ')   
-            //     }
-            // }
-
-           
-            // console.log(`${soma} `)   
+            console.log(`${soma} `)   
     </script>
 </body>
 </html>
