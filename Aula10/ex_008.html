@@ -23,11 +23,12 @@
     let numero = +prompt("Digite um número!")
     let soma = 0
     for (let i = 0; i <= 10;i++){
-        soma += i * numero
-        i++
+        soma = i * numero
+        console.log(`${numero} x ${i} = ${soma}`)
+        soma = 0  
     }
 
-    console.log(`${numero} x ${i} = ${soma}`)  
+    
 
     </script>
 </body>
