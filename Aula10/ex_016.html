@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    // 16) Crie um script que leia 5 valores e mostre qual o maior e o menor valor lido.
+    // Entrada:              Saída:
+    // -1                    O menor valor digitado foi -1
+    // 0                     O maior valor digitado foi 9
+    // 9
+    // 2
+    // 3
+
+        let menor_numero = 0
+        let maior_numero = 0
+        for(let i = 0;i < 5;i++){
+            let numero = +prompt("Digite o número")
+                if (numero > maior_numero){
+                    maior_numero = numero
+                }else if (numero < menor_numero){
+                    menor_numero = numero
+                }
+        }
+
+        console.log(`O menor valor digitado foi ${menor_numero}`)
+        console.log(`O maior numero digitado foi ${maior_numero}`)
+    </script>
+</body>
+</html>

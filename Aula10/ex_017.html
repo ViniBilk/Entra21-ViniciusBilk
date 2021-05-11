@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //         17) Faça um programa que simule a urna eleitoral. Apresente um menu com as seguintes informações para o usuário:
+    // 1 - José Bolinha
+    // 2 - Maria Nascimento
+    // 3 - João da Silva
+    // 4 - Voto nulo
+    // 5 - Voto em branco
+    // Após isso, leia o voto digitado pelo usuário até que ele digite o valor 0. Ao final mostre:
+    // - Total de votos para cada candidato;
+    // - Total de votos nulos;
+    // - Total de votos em branco.
+    // Entrada:               Saída:
+    // 1                      Total de Votos
+    // 1                      José Bolinha: 2 voto(s)
+    // 2                      Maria Nascimento: 1 voto(s)
+    // 3                      João da Silva: 2 voto(s)
+    // 3                      Votos nulos: 1 voto(s)
+    // 4                      Votos em branco: 1 voto(s)
+    // 5
+    // 0
+    alert("Vote com:\n1 - José Bolinha\n2 - Maria Nascimento\n3 - João da Silva\n4 - Voto nulo\n5 - Voto em branco")
+    let jose = 0
+    let maria = 0
+    let joao = 0
+    let nulo = 0
+    let branco = 0
+
+    while(true){
+        let voto = +prompt("Digite seu voto")
+        if(voto == 0){
+            break
+
+            switch(voto){
+                case 1:
+                jose + 1
+                continue
+                case 2:
+                maria + 1
+                continue
+                case 3:
+                joao + 1
+                continue
+                case 4:
+                nulo + 1
+                continue
+                case 5:
+                branco + 1
+                continue
+                default:
+                    continue
+                }
+
+            }
+        }
+    console.log(`Total de Votos\nJosé Bolinha: ${jose} voto(s)\nMaria Nascimento: ${maria} voto(s)\nJoão da Silva: ${joao} voto(s)\nVotos nulos: ${nulo} voto(s)\nVotos em branco: ${branco} voto(s)`)
+    </script>
+</body>
+</html>
