@@ -37,29 +37,28 @@
         let voto = +prompt("Digite seu voto")
         if(voto == 0){
             break
-
+        }
             switch(voto){
                 case 1:
-                jose + 1
-                continue
+                    jose++
+                    break
                 case 2:
-                maria + 1
-                continue
+                    maria++
+                    break
                 case 3:
-                joao + 1
-                continue
+                    joao++
+                    break  
                 case 4:
-                nulo + 1
-                continue
+                    nulo++
+                    break
                 case 5:
-                branco + 1
-                continue
+                    branco++
+                    break
                 default:
-                    continue
-                }
-
+                    console.log("Numero Invalido")
             }
-        }
+
+    }
     console.log(`Total de Votos\nJosé Bolinha: ${jose} voto(s)\nMaria Nascimento: ${maria} voto(s)\nJoão da Silva: ${joao} voto(s)\nVotos nulos: ${nulo} voto(s)\nVotos em branco: ${branco} voto(s)`)
     </script>
 </body>

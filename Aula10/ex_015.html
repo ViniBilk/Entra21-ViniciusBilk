@@ -10,8 +10,7 @@
 
         let somaFilhos = 0
         let somaSalario = 0
-        let mediaFilhos = 0
-        let mediaSalario = 0
+        let contador = 0
         let maiorSalario = 0
     while(true){
         let salario = +prompt("Digite o salário")   
@@ -20,15 +19,18 @@
         } else { 
             let quant_Filhos = +prompt("Digite a quantidade de Filhos")
             somaFilhos += quant_Filhos
-            mediaFilhos++
             somaSalario += salario
-            mediaSalario++
+            contador++
+
+            if(salario > maiorSalario){
+                maiorSalario = salario
+            }
 
             }
 
         }
 
-    console.log(`Média Salarial: ${somaSalario / mediaSalario}\nMédia Filhos: ${somaFilhos / mediaFilhos.toFixed(2)}\nMaior Salário: ${maiorSalario}`)
+    console.log(`Média Salarial: ${somaSalario / contador}\nMédia Filhos: ${somaFilhos / contador.toFixed(2)}\nMaior Salário: ${maiorSalario}`)
     </script>
 </body>
 </html>
