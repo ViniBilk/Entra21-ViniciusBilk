@@ -11,12 +11,19 @@
 // maior elemento e a posição que ele se encontra.
 
         let numeros = []
+        let maiorNumero = 0
         for(let i = 0;i < 5;i++){
             let numero = +prompt("Digite um número")
-            numeros[i] = numeros
+            if (numero > maiorNumero){
+                maiorNumero = numero
+                numeros.push(maiorNumero)
+            }
+            numeros[i] = numero
         }
         console.log(numeros)
-        console.log(numeros[4])
+        console.log(`Maior número é ${maiorNumero}`)
+        console.log(`Está na posição numero 0`)
+        
     </script>
 </body>
 </html>

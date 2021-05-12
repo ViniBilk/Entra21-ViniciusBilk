@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         5) Ler um vetor com 5 nomes de pessoas, após pedir que o usuário digite um nome qualquer 
+// de pessoa. Escrever a mensagem “ACHEI”, se o nome estiver armazenado no vetor de nomes ou 
+// “NÃO ACHEI” caso contrário.
+        let vetor = []
+        for(let j = 0;j < 5;j++){
+            vetor[j] = prompt("Nome das Pessoas")
+        }
+
+        let nome = prompt("Qual nome você quer encontrar?")
+        for(let i = 0;i < 6;i++) {
+            if (nome == vetor[i]) {
+                console.log("ACHEI")
+                break
+            } else if (i < 5) { 
+                    continue 
+            } else {
+                console.log("NÃO ACHEI")
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         4) Ler um vetor de 5 elementos. Crie um segundo vetor, com todos os elementos na ordem 
+// inversa, ou seja, o último elemento passará a ser o primeiro, o penúltimo será o segundo 
+// e assim por diante. Mostre os dois vetores. 
+    let vetor = []
+    let vetorInverso = []
+    let contador = 5
+    for(let i = 0;i < 5;i++){
+         vetor[i] = +prompt("Digite um número")
+         contador--
+        vetorInverso[contador] = vetor[i]
+    }
+
+    console.log(vetor)
+    console.log(vetorInverso)
+
+    </script>
+</body>
+</html>

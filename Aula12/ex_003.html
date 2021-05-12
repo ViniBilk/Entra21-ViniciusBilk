@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+    // 3) Faça um programa que receba do usuario um vetor com 5 posições. Em seguida, mostre
+    // o maior e o menor elemento do vetor.
+    let valores = []
+    let maior = 0
+    let menor = 1
+    for(let i = 0;i < 5;i++){
+        let numero = +prompt("Digite um número")
+        valores[i] = numero
+        if (numero > maior){
+            maior = numero
+        } else if (numero < menor){
+            menor = numero
+        }
+    }
+
+    console.log(`O maior número é ${maior}`)
+    console.log(`O menor número é ${menor}`)
+    </script>
+</body>
+</html>

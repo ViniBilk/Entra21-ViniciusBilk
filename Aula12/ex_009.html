@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         9) Faça um programa que leia um vetor de 8 posições e, em seguida, leia também dois
+// valores X e Y quaisquer correspondentes a duas posições no vetor. Ao final seu programa
+// deverá escrever a soma dos valores encontrados nas respectivas posições X e Y. Se o usuário
+// digitar valores inválidas para X ou Y mostre uma mensagem de erro e peça novos valores até 
+// que ambos os valores sejam válidos.
+
+
+        let contador = 0
+        let soma = 0
+        let vetor = []
+        let flag = false
+
+        for(let i = 0;i < 8;i++) {
+            vetor[i] = +prompt("Numeros a serem guardados")
+        }
+    
+        while(flag == false) {                                             
+                let numerox = +prompt("Digite o X")                        
+            for(let j = 0;j < 8;j++){                                                    
+                if (numerox == vetor[j]) {                            
+                    soma += numerox                                                
+                    flag = true                                                     
+                    break                                                                                                         // se não adiciona 1 ao contador enquanto for menor que 8                                                                       //continua
+            } else if (j == 7){
+                    console.log("Numero Inválido")
+                    continue    
+    
+                }
+            }
+        }
+
+        flag = false
+
+        while(flag == false) {                                             
+                let numeroy = +prompt("Digite o y")                        
+            for(let j = 0;j < 8;j++){                                                    
+                if (numeroy == vetor[j]) {                            
+                    soma += numeroy                                                
+                    flag = true                                                     
+                    break                                                                                                         // se não adiciona 1 ao contador enquanto for menor que 8                                                                       //continua
+            } else if (j == 7){
+                    console.log("Numero Inválido")
+                    continue    
+    
+                }
+            }
+        }
+        
+        console.log(soma)
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         8) Crie um programa que leia 6 valores inteiros pares (GARANTA QUE ELES SEJAM PARES) e, em
+// seguida, mostre na tela os valores lidos na ordem inversa.
+        let vetor = []
+        let contador = 0
+        let numero = 0
+        for(let i = 0;i < 6;i++){
+             numero = +prompt("Digite um número")
+            if(numero % 2 == 0){
+                vetor[contador] = numero
+                contador++
+            }
+        }
+
+        let j = vetor.length - 1
+        while(j >= 0){
+            console.log(vetor[j])
+            j--
+        }
+    </script>
+</body>
+</html>

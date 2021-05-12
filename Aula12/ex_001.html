@@ -7,10 +7,14 @@
 </head>
 <body>
     <script>
-        //1) Leia um vetor de 10 posicões. Calcule e escreva quantos valores pares ele possui.
-        let vetor = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9 , 10 ]
-        console.log(vetor)
-        console.log(vetor.length)
+    //1) Leia um vetor de 10 posicões. Calcule e escreva quantos valores pares ele possui.
+    let contador = 0
+    let numeros = []
+    for(let i = 0;i < 10;i++){
+            numeros[i] = +prompt("Digite o número")
+        if (numeros[i] % 2 == 0) contador++
+    }
+    console.log(`Essa é a a quantidade de números pares: ${contador}`)
     </script>
 </body>
 </html>

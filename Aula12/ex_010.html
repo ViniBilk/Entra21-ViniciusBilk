@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         10) Faça um programa que leia 10 números e preencha um vetor, calcule e
+// mostre a quantidade de numeros negativos e a soma dos números positivos desse vetor.
+
+        let vetor = []
+        let soma = 0
+        let quantNegativos = 0
+        for(let i = 0;i < 10;i++){
+            vetor[i] = +prompt("Digite os números")
+            if (vetor[i] > 0){
+                soma += vetor[i]
+            }else{
+                quantNegativos++
+            }
+        }
+        console.log(`Quantidade de negativos: ${quantNegativos}`)
+        console.log(`Soma dos positivos: ${soma}`)
+    </script>
+</body>
+</html>
