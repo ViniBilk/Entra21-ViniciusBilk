@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         13) Faça um programa para ler a nota da prova de alunos e armazene num vetor, calcule e
+// mostre a média geral da turma e também a maior nota da turma. O programa deve parar de armazenar
+// as notas quando uma nota negativa for digitada.
+// Entrada:             Saída:
+// 10                   Média da turma: 9.20
+// 9                    Maior nota: 10.00
+// 9
+// 9
+// 9
+//-1    
+
+        let contadorDivisão = 0,
+        contador = 0,
+        maiorNota = 0,
+        soma = 0,
+        notas = []
+
+        while(true){
+             let numero = +prompt("Digite as notas")
+             if(numero < 0){
+                break
+            }else if(numero > maiorNota){
+                maiorNota = numero
+            }else{
+                notas[contador] = numero
+                soma += numero
+                contador++
+                contadorDivisão++
+            }
+
+        }
+
+        let media = soma / contadorDivisão
+        console.log(`Média da turma : ${media.toFixed(2)}`)
+        console.log(`Maior nota foi : ${maiorNota.toFixed(2)}`) 
+    </script>
+</body>
+</html>

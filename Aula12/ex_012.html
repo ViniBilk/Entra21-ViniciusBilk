@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         12) Faça um programa que simule o lançamento de 100 dados (Utilize a função Math.random()). Armazene Os
+// lançamentos em um vetor e mostre a quantidade de vezes que cada número (1..6) apareceu.
+
+        //REVER
+
+        let flag = false
+        let repetidos = [0, 0, 0, 0, 0, 0]
+        let contador = -1
+
+        let numeros = []
+        for(let i = 0;i < 100;i++) {
+            numeros[i] = +(Math.random() * (6 - 1) + 1).toFixed();
+        }
+
+        while(flag == false){
+            contador++
+            for(let j = 0;j < 100;j++){
+                switch(numeros[j]){
+
+                    case 1 :
+                        repetidos[0]++
+                        break
+                    case 2 :
+                        repetidos[1]++
+                        break
+                    case 3 :
+                        repetidos[2]++
+                        break
+                    case 4 :
+                        repetidos[3]++
+                        break
+                    case 5 :
+                        repetidos[4]++
+                        break
+                    case 6 :
+                        repetidos[5]++
+                        break
+                }      
+
+                if (j == 99){
+                    flag = true
+                }
+
+            }   
+        }
+
+        let ajuda = 1
+        for(let i = 0; i <= 5; i++){
+            console.log(`O número ${ajuda} apareceu ${repetidos[i]} vez(es)`)
+            ajuda++
+            }
+    </script>
+</body>
+</html>

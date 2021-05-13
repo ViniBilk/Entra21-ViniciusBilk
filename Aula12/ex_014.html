@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         14) Escreva um programa que leia dois vetores com 5 posições e mostre se eles são iguais ou diferentes
+// Entrada:             Saída:
+// 1                    Os vetores são iguais
+// 2
+// 3
+// 4
+// 5
+// 1
+// 2
+// 3
+// 4
+// 5    
+
+        
+        let vetor1= [],
+        vetor2 = []
+        contador = 0
+        flag = false
+
+        for(let i = 0;i < 5;i++){
+            vetor1[i] = +prompt("Numeros do Primeiro Vetor")
+        }
+
+        for(let i = 0;i < 5;i++){
+            vetor2[i] = +prompt("Numeros do Segundo Vetor")
+        }
+
+        while(flag == false){
+            for(let i = 0;i < 6;i++){
+                if(vetor1[i] == vetor2[contador]){
+                    contador++
+                }else{
+                    console.log("Os vetores não são iguais")
+                    flag = true
+                    break
+                }
+                if(i == 5){
+                    console.log("Os vetores são iguais")
+                    flag = true
+                }
+            }
+        
+        }
+        
+    </script>
+</body>
+</html>

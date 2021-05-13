@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         15) Escreva um script que leia 2 vetores com 5 posições. Verifique a intersecção
+// dos vetores (valores que aparecem em ambos) e armazene esses valores em um terceiro vetor.
+// Ao final, mostra na tela os 3 vetores.
+// Entrada:              Saída:
+// a                     Vetor 1: ["a", "b", "c", "d", "e"]
+// b                     Vetor 2: ["f", "g", "h", "i", "a"]
+// c                     Intersecção: ["a"]
+// d
+// e
+// f
+// g
+// h
+// i
+// a
+
+        //Rever
+
+        let vetor1 = [],
+        vetor2 = [],
+        vetor3 =[],
+        flag = false,
+        contador = 0
+
+        for(let i = 0;i < 5;i++){
+            vetor1[i] = prompt("Digite os valores do primeiro vetor").toUpperCase
+        }
+
+        for(let i = 0;i < 5;i++){
+            vetor2[i] = prompt("Digite os valores do segundo vetor").toUpperCase
+        }
+
+        while(flag = false) {
+            for(let i = 0;i <= 5;i++) {
+                if(i == 5){
+                        flag = true    
+                    } else if (vetor1[i] == vetor2[contador]) {
+                        vetor3[i] = vetor1[i]
+                        contador++
+                }       
+            }  
+        }
+        console.log(vetor3)
+
+    </script>
+</body>
+</html>
