@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         21) Faça um script que receba o nome de cinco produtos e seus respectivos preços, armazene­-os em dois vetores separados, 
+// um para os produtos e outro para os preços. O programa deve calcular e mostrar:
+// a) A quantidade de produtos com preço inferior a R$ 50,00;
+// b) O nome dos produtos com preço entre R$ 50,00 e R$ 100,00;
+// c) A média dos preços dos produtos com preço superior a R$ 100,00.
+
+        let produtos = [],
+        precos = [],
+        inferior50 = 0,
+        cinquenta100 = ""
+        superior100 = 0
+        divisorde100 = 0
+
+        for(let i = 0;i < 5;i++){
+            produtos[i] = prompt("Digite o nome do produto")
+            precos[i] = +prompt("Qual o valor do produto?")
+                if(precos[i] < 50){
+                    inferior50++
+                } else if (precos[i] >= 50 && precos[i] <=100){
+                    cinquenta100 += produtos[i] + " "
+                }else if(precos[i] > 1000){
+                    superior100 += precos[i]
+                    divisorde100++                
+                }
+        }
+
+        let media = superior100 / divisorde100
+
+        console.log(`A quantidade de produtos com preço inferior a R$ 50,00 é ${inferior50 || 0}`)
+        console.log(`O nome dos produtos com preço entre R$ 50,00 e R$ 100,00 é ${cinquenta100 || 0}`)
+        console.log(`A média dos preços dos produtos com preço superior a R$ 100,00 é ${media || 0}`)
+
+    </script>
+</body>
+</html>

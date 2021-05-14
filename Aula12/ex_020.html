@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         20) Faça um programa que receba 10 notas de uma turma e armazene em um vetor. Depois disso, calcule a média de notas
+// da turma e mostre na tela as notas que estão acima da média.
+
+
+        let notas = [],
+        aprovados = [],
+        j = 0,
+        soma = 0
+
+
+        for(let i = 0; i < 10;i++){
+            notas[i] = +prompt("Digite as notas")
+            soma += notas[i]
+                    if(notas[i] >= 6){
+                        aprovados[j] = notas[i]
+                        j++
+                    }
+        }
+        let media = soma / 10
+        console.log(notas)
+        console.log(media)
+        console.log(aprovados)
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         18) Crie um script que preencha um vetor com 10 números aleatórios entre 1..10 (utilizar a função Math.random()),
+// após isso mostre:
+// a) Os números presentes no vetor
+// b) A soma dos números pares
+// c) A multiplicação dos números ímpares
+
+    let numeros = [],
+    pares = 0,
+    impares = 0  
+    for(let i = 0;i < 10;i++) {
+            numeros[i] = +(Math.random() * (10 - 1) + 1).toFixed();
+        }
+
+    let j = -1
+
+    for(let i = 0;i < 10;i++){
+        if (numeros[i] % 2 == 0){
+            pares += numeros[i]
+        }else if (j == -1){
+            impares = numeros[i] * 1
+            j++
+        }else{
+            impares = numeros[i] * impares
+            j++
+        }
+    }
+
+    console.log(`Vetor : ${numeros}`)
+    console.log(`Soma dos pares : ${pares}`)
+    console.log(`Multiplicação dos ímpares : ${impares}`)
+
+    </script>
+</body>
+</html>

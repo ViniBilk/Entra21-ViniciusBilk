@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //1. Leia uma matriz 3 x 3, conte e escreva quantos valores maiores que 10 ela possui.
+        
+        debugger
+        let matriz = [],
+        maiores10 = 0
+
+        for(let linha = 0;linha < 10;linha++){
+                matriz[linha] = []
+            for(let coluna = 0;coluna < 10;coluna++){
+                    matriz[linha][coluna] = +prompt("Digite os numeros")
+                        if(matriz[linha][coluna] > 10){
+                            maiores10++
+                
+                        }   
+            }
+        }
+
+        console.log(`${matriz}`)
+        console.log(`Ela possui ${maiores10} maiores que 10`)
+    </script>
+</body>
+</html>

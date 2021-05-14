@@ -22,8 +22,6 @@
 // i
 // a
 
-        //Rever
-
         let vetor1 = [],
         vetor2 = [],
         vetor3 =[],
@@ -31,24 +29,29 @@
         contador = 0
 
         for(let i = 0;i < 5;i++){
-            vetor1[i] = prompt("Digite os valores do primeiro vetor").toUpperCase
+            vetor1[i] = prompt("Digite os valores do primeiro vetor")
         }
 
         for(let i = 0;i < 5;i++){
-            vetor2[i] = prompt("Digite os valores do segundo vetor").toUpperCase
+            vetor2[i] = prompt("Digite os valores do segundo vetor")
         }
 
-        while(flag = false) {
+        while(flag == false) {
             for(let i = 0;i <= 5;i++) {
-                if(i == 5){
-                        flag = true    
-                    } else if (vetor1[i] == vetor2[contador]) {
+                if(contador == 5){
+                        flag = true
+                           
+                        } else if (vetor1[i] == vetor2[contador]) {
                         vetor3[i] = vetor1[i]
                         contador++
-                }       
+                    } else if(i == 5){
+                        contador++
+                }   
             }  
         }
-        console.log(vetor3)
+        console.log(`Vetor 1 : ${vetor1}`)
+        console.log(`Vetor 2 : ${vetor2}`)
+        console.log(`Insersecção : ${vetor3}`)
 
     </script>
 </body>

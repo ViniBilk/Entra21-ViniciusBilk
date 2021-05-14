@@ -16,13 +16,18 @@
             let numero = +prompt("Digite um número")
             if (numero > maiorNumero){
                 maiorNumero = numero
-                numeros.push(maiorNumero)
             }
             numeros[i] = numero
         }
+
         console.log(numeros)
-        console.log(`Maior número é ${maiorNumero}`)
-        console.log(`Está na posição numero 0`)
+
+        for(let i = 0;i < 5;i++){
+            if (numeros[i] == maiorNumero){
+                console.log(`O maior número é ${maiorNumero} e está na posição ${i}`)
+            }
+        }
+        
         
     </script>
 </body>
