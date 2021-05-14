@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         3. Leia uma matriz 3 x 3. Leia tambem um valor X. O programa devera fazer uma busca
+// desse valor na matriz e, ao final, escrever a localização (linha e coluna) ou uma mensa-
+// gem de “não encontrado”.
+
+        let matriz =[]
+
+        for(let i = 0;i < 3;i++){
+            matriz[i] = []
+            for(let j = 0;j < 3;j++){
+                let numero  = +prompt("Digite os números")
+                matriz[i][j] = numero
+            }
+        }
+
+        let flag = false
+        let numero = +prompt("Que numero deseja encontrar?")
+        while(flag == false){
+        for(let i = 0;i < 3;i++){
+            for(let j = 0;j < 3;j++){
+                if(matriz[i][j] = numero){
+                    console.log("ACHEI")
+                    flag = true
+                } else if (i == 2) {
+                    console.log("NÃO ACHEI")
+                }
+            }
+        }
+    } 
+        
+
+    </script>
+</body>
+</html>

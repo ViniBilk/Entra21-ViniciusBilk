@@ -8,23 +8,24 @@
 <body>
     <script>
         //1. Leia uma matriz 3 x 3, conte e escreva quantos valores maiores que 10 ela possui.
-        
-        debugger
         let matriz = [],
-        maiores10 = 0
+        maiores10 = 0,
+        mostrarMatriz = ""
 
-        for(let linha = 0;linha < 10;linha++){
-                matriz[linha] = []
-            for(let coluna = 0;coluna < 10;coluna++){
-                    matriz[linha][coluna] = +prompt("Digite os numeros")
-                        if(matriz[linha][coluna] > 10){
-                            maiores10++
-                
-                        }   
+        for(let linha = 0; linha < 3; linha++){
+            matriz[linha] = []
+            for(let coluna = 0; coluna < 3; coluna++){
+                matriz[linha][coluna] = +prompt("Digite os numeros")
+                mostrarMatriz += matriz[linha][coluna] + "\t"
+                if(matriz[linha][coluna] > 10){
+                    maiores10++
+                }   
             }
+            mostrarMatriz += "\n"
         }
 
-        console.log(`${matriz}`)
+        
+        console.log(`${mostrarMatriz}`)
         console.log(`Ela possui ${maiores10} maiores que 10`)
     </script>
 </body>
