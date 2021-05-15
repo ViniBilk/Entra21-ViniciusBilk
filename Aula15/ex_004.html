@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         4. Leia duas matrizes 3 x 3 e escreva uma terceira com os maiores valores de cada posiçãp
+// das matrizes lidas.
+// Entrada:          Saída:
+// 1 2 3             1 3 3
+// 4 5 6             5 5 6
+// 7 8 9             7 9 9
+
+// 0 3 2
+// 5 4 5
+// 6 9 8
+
+        let matriz1 = [],
+        matriz2 = [],
+        maioresValores = [],
+        flag = false,
+        mostrarMatriz = "",
+        contador = 0
+
+        for(let i = 0;i < 3;i++){
+            matriz1[i] = []
+            for(let j = 0;j < 3;j++){
+                matriz1[i][j] = +prompt("Digite os números da primeira matriz")
+                mostrarMatriz += matriz1[i][j] + "\t"
+            }
+            mostrarMatriz += "\n"
+        }
+        console.log(mostrarMatriz)
+        mostrarMatriz = ""
+
+        for(let i = 0;i < 3;i++){
+            matriz2[i] = []
+            for(let j = 0;j < 3;j++){
+                matriz2[i][j] = +prompt("Digite os números da segunda matriz")
+                mostrarMatriz += matriz2[i][j] + "\t"
+            }
+            mostrarMatriz += "\n"
+        }
+
+        console.log(mostrarMatriz)
+        mostrarMatriz = ""
+
+        while(flag == false){
+            for(let i = 0;i < 3;i++) {
+                maioresValores[i] = []
+                for(let j = 0;j < 3;j++) {
+                    if(matriz1[i][j] >= matriz2[i][j]) {
+                        maioresValores[i][j] = matriz1[i][j]
+                        mostrarMatriz += maioresValores[i][j] + "\t"
+                        contador++
+
+                    } else if (matriz2[i][j] >= matriz1[i][j]){ 
+                        maioresValores[i][j] = matriz2[i][j]
+                        mostrarMatriz += maioresValores[i][j] + "\t"
+                        contador++
+
+                    } else if (i == 2 && j == 2)  
+                        i = 3
+                        flag = true
+                }    
+                mostrarMatriz += "\n"
+            }       
+        }
+
+        console.log(mostrarMatriz)
+    </script>
+</body>
+</html>

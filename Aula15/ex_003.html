@@ -23,18 +23,23 @@
 
         let flag = false
         let numero = +prompt("Que numero deseja encontrar?")
-        while(flag == false){
-        for(let i = 0;i < 3;i++){
-            for(let j = 0;j < 3;j++){
-                if(matriz[i][j] = numero){
-                    console.log("ACHEI")
-                    flag = true
-                } else if (i == 2) {
-                    console.log("NÃO ACHEI")
+
+        while(flag === false){
+            for(let i = 0;i < 3;i++){
+                for(let j = 0;j < 3;j++){
+                    if(matriz[i][j] == numero){
+                        console.log("ACHEI")
+                        console.log(`O números ${matriz[i][j]} está na linha ${i} e na coluna ${j}!`)
+                        flag = true
+                        i = 3
+                        break
+                     } else if(i == 2 && j == 2){
+                        console.log("NÃO ACHEI")
+                        flag = true
+                    }
                 }
             }
-        }
-    } 
+        } 
         
 
     </script>
