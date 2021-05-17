@@ -46,49 +46,49 @@
         for(let i = 0;i < 3;i++){
             notas[i] = []
             for(let j = 0;j < 6;j++)
-            switch(j){
-                case 0:
-                notas[i][j] = prompt("Digite o nome do aluno")
-                mostrarMatriz += notas[i][j] + "\t"
-                break
+                switch(j){
+                    case 0:
+                        notas[i][j] = prompt("Digite o nome do aluno")
+                        mostrarMatriz += notas[i][j] + "\t"
+                        break
 
-                case 1:
-                notas[i][j] = +prompt("Digite a primeira nota")
-                soma += notas[i][j]
-                mostrarMatriz += notas[i][j] + "\t"
-                break
+                    case 1:
+                        notas[i][j] = +prompt("Digite a primeira nota")
+                        soma += notas[i][j]
+                        mostrarMatriz += notas[i][j] + "\t"
+                        break
 
-                case 2:
-                notas[i][j] = +prompt("Digite a segunda nota")
-                soma += notas[i][j]
-                mostrarMatriz += notas[i][j] + "\t"
-                break
+                        case 2:
+                        notas[i][j] = +prompt("Digite a segunda nota")
+                        soma += notas[i][j]
+                        mostrarMatriz += notas[i][j] + "\t"
+                        break
 
-                case 3:
-                notas[i][j] = +prompt("Digite a terceira nota")
-                soma += notas[i][j]
-                mostrarMatriz += notas[i][j] + "\t"
-                break
+                    case 3:
+                        notas[i][j] = +prompt("Digite a terceira nota")
+                        soma += notas[i][j]
+                        mostrarMatriz += notas[i][j] + "\t"
+                        break
 
-                case 4:
-                media = (soma / 3)
-                notas[i][j] = media
-                mostrarMatriz += notas[i][j] + "\t"
-                break
+                    case 4:
+                        media = (soma / 3)
+                        notas[i][j] = media
+                        mostrarMatriz += notas[i][j] + "\t"
+                        break
 
-                case 5:
-                if(media >= 6){
+                    case 5:
+                        if(media >= 6){
                             notas[i][j] = "Aprovado"
                             mostrarMatriz += notas[i][j] + "\t"
                             flag = true
                             soma = 0
                         } else {
-                        notas[i][j] = "Reprovado"
-                        mostrarMatriz += notas[i][j] + "\t"
+                            notas[i][j] = "Reprovado"
+                            mostrarMatriz += notas[i][j] + "\t"
                             flag = true
                             soma = 0
                         }
-                break
+                        break
             }  
             mostrarMatriz += "\n"  
         }
