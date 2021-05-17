@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-//         6. Faça um script que leia o nome e as notas de 3 alunos e armazene essas informações em
+// 6. Faça um script que leia o nome e as notas de 3 alunos e armazene essas informações em
 // uma matriz no seguinte formato:
 // João   10   9   8
 // Maria  5    5   5 
@@ -36,8 +36,66 @@
 // 8
 // 8
 
+        let notas = [],
+        flag = false,
+        soma = 0,
+        media = 0,
+        mostrarMatriz = ""
+        
+        while(flag == false){
+            for(let i = 0;i < 3;i++){
+                notas[i] = []
+                for(let j = 0;j < 6;j++)
+                switch(j){
+                    case 0:
+                    notas[i][j] = prompt("Digite o nome do aluno")
+                    mostrarMatriz += notas[i][j] + "\t"
+                    break
 
+                    case 1:
+                    notas[i][j] = +prompt("Digite a primeira nota")
+                    soma += notas[i][j]
+                    mostrarMatriz += notas[i][j] + "\t"
+                    break
 
+                    case 2:
+                    notas[i][j] = +prompt("Digite a segunda nota")
+                    soma += notas[i][j]
+                    mostrarMatriz += notas[i][j] + "\t"
+                    break
+
+                    case 3:
+                    notas[i][j] = +prompt("Digite a terceira nota")
+                    soma += notas[i][j]
+                    mostrarMatriz += notas[i][j] + "\t"
+                    break
+
+                    case 4:
+                    media = (soma / 3)
+                    notas[i][j] = media
+                    mostrarMatriz += notas[i][j] + "\t"
+                    break
+
+                    case 5:
+                    if(media >= 6){
+                             notas[i][j] = "Aprovado"
+                             mostrarMatriz += notas[i][j] + "\t"
+                             flag = true
+                             soma = 0
+                         } else {
+                            notas[i][j] = "Reprovado"
+                            mostrarMatriz += notas[i][j] + "\t"
+                             flag = true
+                             soma = 0
+                            }
+                    break
+                }  
+                mostrarMatriz += "\n"  
+            }
+
+        }
+
+        console.log(mostrarMatriz)
     </script>
 </body>
 </html>
