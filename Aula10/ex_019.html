@@ -7,7 +7,20 @@
 </head>
 <body>
     <script>
-        
+        while (true) {
+    let matricula = Number(prompt("Qual a matricula do aluno? "))
+    if (matricula === 0) {
+        break
+    }
+    let nota1 = Number(prompt("Qual a primeira nota? "))
+    let nota2 = Number(prompt("Qual a segunda nota? "))
+    let nota3 = Number(prompt("Qual a terceira nota? "))
+
+    let media = (nota1 + nota2 + nota3) / 3
+
+    console.log(` A média do aluno com a matricula ${matricula} é ${media.toFixed(2)}`)
+}
+
     </script>
 </body>
 </html>

@@ -7,7 +7,15 @@
 </head>
 <body>
     <script>
-        
+            let menorNumero = Number(prompt("O menor Número"))
+    let maiorNumero = Number(prompt("Digite o maior Número"))
+    let somaPar = 0
+    let multiplicaImpar = 1
+
+    for (let i = menorNumero; i <= maiorNumero; i++) {            
+        i % 2 == 0 ? somaPar += i : multiplicaImpar *= i
+    }
+    console.log(`Soma dos pares: ${somaPar}\nMultiplição dos Impares: ${multiplicaImpar}`)
     </script>
 </body>
 </html>
