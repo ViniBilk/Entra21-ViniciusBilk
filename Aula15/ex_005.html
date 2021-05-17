@@ -12,20 +12,21 @@
 // diagonal principal.
 
         let matriz = [],
-        mostrarMatriz = ""
+        mostrarMatriz = "",
+        somaAcimaDiagonal = 0
 
         for(let i = 0;i < 3;i++){
             matriz[i] = []
             for(let j = 0;j < 3;j++){
                 matriz[i][j] = +prompt("Digiter os números")
                 mostrarMatriz += matriz[i][j] + "\t"
+                if (j > i) somaAcimaDiagonal += matriz[i][j]
             }
             mostrarMatriz += "\n"
         }
 
         console.log(mostrarMatriz)
-        let soma = matriz[0][1] + matriz[0][2] + matriz[1][2]
-        console.log(soma)
+        console.log(somaAcimaDiagonal)
     </script>
 </body>
 </html>
