@@ -14,26 +14,27 @@
 // que ambos os valores sejam válidos.
 
 
-        let contador = 0
-        let soma = 0
-        let vetor = []
-        let flag = false
+        let contador = 0,
+        soma = 0,
+        vetor = [],
+        flag = false,
+        numerox = 0,
+        numeroy = 0
 
         for(let i = 0;i < 8;i++) {
             vetor[i] = +prompt("Numeros a serem guardados")
         }
     
         while(flag == false) {                                             
-                let numerox = +prompt("Digite o X")                        
+                numerox = +prompt("Digite o X")                        
             for(let j = 0;j < 8;j++){                                                    
                 if (numerox == vetor[j]) {                            
                     soma += numerox                                                
                     flag = true                                                     
-                    break                                                                                                         // se não adiciona 1 ao contador enquanto for menor que 8                                                                       //continua
-            } else if (j == 7){
+                    break                                                                                                        
+                }else if (j == 7){
                     console.log("Numero Inválido")
-                    continue    
-    
+                    continue   
                 }
             }
         }
@@ -41,12 +42,12 @@
         flag = false
 
         while(flag == false) {                                             
-                let numeroy = +prompt("Digite o y")                        
+                numeroy = +prompt("Digite o y")                        
             for(let j = 0;j < 8;j++){                                                    
                 if (numeroy == vetor[j]) {                            
                     soma += numeroy                                                
                     flag = true                                                     
-                    break                                                                                                         // se não adiciona 1 ao contador enquanto for menor que 8                                                                       //continua
+                    break                                                                                                         
             } else if (j == 7){
                     console.log("Numero Inválido")
                     continue    
@@ -55,7 +56,9 @@
             }
         }
         
-        console.log(soma)
+
+        console.log(vetor)
+        console.log(`Número ${numerox} + ${numeroy} = ${soma}`)
     </script>
 </body>
 </html>

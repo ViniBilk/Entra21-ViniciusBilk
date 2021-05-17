@@ -11,16 +11,18 @@
 // maior elemento e a posição que ele se encontra.
 
         let numeros = []
-        let maiorNumero = 0
+        let maiorNumero = 0,
+        mostrarVetor = ''
         for(let i = 0;i < 5;i++){
             let numero = +prompt("Digite um número")
             if (numero > maiorNumero){
                 maiorNumero = numero
             }
             numeros[i] = numero
+            mostrarVetor += numeros[i] + " "
         }
 
-        console.log(numeros)
+        console.log(mostrarVetor)
 
         for(let i = 0;i < 5;i++){
             if (numeros[i] == maiorNumero){
