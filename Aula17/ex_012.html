@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            
+    // 12) Faça um procedimento que recebe 50 valores inteiros por parâmetro e retorna-os ordenados em ordem decrescente.
+    // Gere 50 valores aleatórios com a função Math.random(), adicione-os em um vetor e mostre eles na tela antes da
+    // ordenação e após a ordenação.
+    
+    let numeros = []
+
+    for(let i = 0;i < 50;i++) {
+        numeros[i] = +(Math.random() * (1000 - 1) + 1).toFixed()
+    }
+
+
+        function compararNumeros(a, b) {
+    return a - b;
+    }
+
+    function mostraVetorOrdenado(numeros){
+        numeros.sort(compararNumeros)
+        return numeros.join(",")
+    }
+    
+    function decresenteVetor(mostraVetorOrdenado){
+        numeros.reverse()
+        return numeros.join(",")
+    }
+
+    console.log(mostraVetorOrdenado(numeros))
+    console.log(decresenteVetor(mostraVetorOrdenado))
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         4) Crie uma script que receba o valor de 3 notas, utilize uma função para calcular a média e
+// mostre ela na tela.
+
+        let notas = [],
+            soma = 0
+
+        for(let i = 0;i < 3;i++){
+            notas[i] = +prompt(`Digite a ${i + 1} nota!`)
+        }
+        
+        function media(notas){
+            for(let i = 0;i < 3;i++){
+                soma += notas[i]
+            }
+            return soma / 3
+        }
+
+        console.log(`A média é : ${media(notas)}`)
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //         5) Faça um script que receba a média de um aluno e com a ajuda de uma função que recebe 
+    // a média por parâmetro retorne o conceito da média conforme a tabela abaixo:
+    // +----------------+-----------+
+    // |     Média      |  Conceito |
+    // +----------------+-----------+
+    // | de 0.0 à 4.9   |     D     |
+    // | de 5.0 à 6.9   |     C     |
+    // | de 7.0 à 8.9   |     B     |
+    // | de 9.0 à 10.0  |     A     |
+    // +----------------+-----------+
+
+    let media = +prompt("Digite a média do aluno")
+
+    function qualConceito(media){
+        if(media >= 0 && media <= 4.9){
+            return "D"
+
+        } else if(media >= 5.0 && media < 6.9){
+            return "C"
+
+        }else if (media >= 7.0 && media < 8.9){
+            return "B"
+
+        }else if (media >= 9 && media <= 10){
+            return "A"
+        }else{
+            return false
+        }
+    }
+    
+    console.log(qualConceito(media))
+
+
+    </script>
+</body>
+</html>

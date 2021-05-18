@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         1) Faça uma função que recebe um valor inteiro e verifica se o valor é positivo ou negativo. 
+// A função deve retornar um valor booleano. Receba um valor do usuário e mostre o resultado
+// da função.
+
+        let numero = +prompt("Digite um número")
+        
+        function ehPositivo(numero){
+            if(numero > 0){
+                return true
+            }
+            return false
+        }
+        
+        (ehPositivo(numero)) ? console.log("É positivo") : console.log("É negativo")
+    </script>
+</body>
+</html>

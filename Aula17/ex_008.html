@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //8) Faça uma função que recebe a idade de uma pessoa em anos, meses e dias e retorna essa idade expressa em dias.
+
+        let anos = +prompt("Quantos anos você tem?")
+                meses = +prompt("Quantos meses você tem?"),
+                dias = +prompt("Quantos dias você tem?")
+
+        function totalDias(anos, meses , dias){
+                let totalDias = 0
+
+                totalDias += anos * 365
+                totalDias += meses * 30
+                totalDias += dias
+
+                return console.log(`O total de dias é ${totalDias}`)
+        }
+
+        totalDias(anos,meses,dias)
+    </script>
+</body>
+</html>
