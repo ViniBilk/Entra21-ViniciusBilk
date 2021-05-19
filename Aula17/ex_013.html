@@ -7,26 +7,29 @@
 </head>
 <body>
     <script>
-    //         13) Faça uma função que recebe por parâmetro os valores necessários para o cálculo da fórmula de báskara e 
+    // 13) Faça uma função que recebe por parâmetro os valores necessários para o cálculo da fórmula de báskara e 
     // retorna as suas raízes, caso seja possível calcular. Peça os valores necessários para o usuário e teste a função.
-    "use strict"
 
-    let x = 0
     
-    function delta(a ,b ,c){
-        return Math.sqrt(b ** 2 - 4 * a * c)
-    }
-
-    function bascara(a , b , c , x){
-        x = (-b + delta(a,b,c)) / (2 * a)
-       return x
-    }
-
     let a = +prompt("Qual o valor de 'a'?"),
         b = +prompt("Qual o valor de 'b'?"),
         c = +prompt("Qual o valor de 'c'?")
 
-    console.log(bascara(a, b, c, x))
+
+    function calculadelta(a ,b ,c) {
+        return Math.sqrt(b ** 2 - 4 * a * c)
+    }
+
+    let delta = calculadelta(a,b,c)
+
+    function bascara(a , b , c, delta){
+        let x1 = (-(b) + delta) / (2 * a),
+            x2 = (-(b) - delta) / (2 * a)
+       return [`x' = ${x1}` , `x'' = ${x2}`].join("\n")
+    }
+
+    console.log(bascara(a,b,c,delta))
+    
     </script>
 </body>
 </html>
