@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+//         3) Escreva uma função que receba dois parâmetros. O primeiro é o elemento que repetirá, enquanto o segundo é
+// o número de vezes que haverá a repetição. Um array deve ser retornado
+// Exemplo:
+// repetirElemento("oi", 3) // ["oi", "oi", "oi"]
+        function repetidor(mensagem, quantVezes){
+            let armazem = []
+            for(let i = 0;i < quantVezes;i++){
+                armazem[i] = mensagem
+            }
+            return armazem
+        }
+
+        let mensagem = prompt("Qual mensagem vai se repetir",'eai'),
+            quantVezes = +prompt("Quntas vezes?",3)
+
+        console.log(repetidor(mensagem, quantVezes))
+    </script>
+</body>
+</html>

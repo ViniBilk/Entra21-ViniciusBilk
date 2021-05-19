@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //         2) Crie uma função que recebe um número como parâmetro e retorne uma string com o símbolo "#" na quantidade
+        // especificada no parâmetro.
+        // Exemplo:
+        // mostraSimbolo(10) // ##########
+
+        let numero = +prompt("Digite um número")
+
+        function mostrarNumeros(numero){
+            let acumulador = []
+            for(let i = 0;i < numero;i++){
+                acumulador[i] = "#"
+            }
+            return acumulador.join(", ")
+        }
+
+        console.log(mostrarNumeros(numero))
+    </script>
+</body>
+</html>

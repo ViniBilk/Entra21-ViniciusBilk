@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //         6) Elabore uma função que receba um vetor e retorne outro vetor que tenha todos os números que são pares e estão em
+    // índices pares do vetor.
+
+        let numeros = []
+
+        for(let i = 0;i < 20;i++) {
+                numeros[i] = +(Math.random() * (50 - 1) + 1).toFixed()
+            }
+     
+        function selecionar(numeros){
+            let contador = 0
+            let escolhidos = []
+            for(let i = 0;i < 20;i++){
+                if(i % 2 == 0){
+                    if(numeros[i] % 2 == 0){
+                        escolhidos[contador] = numeros[i]
+                        contador++
+                    }
+                }
+            }
+            return escolhidos
+        }
+
+        console.log(numeros)
+        console.log(selecionar(numeros))
+    </script>
+</body>
+</html>
