@@ -25,10 +25,12 @@
     function bascara(a , b , c, delta){
         let x1 = (-(b) + delta) / (2 * a),
             x2 = (-(b) - delta) / (2 * a)
-       return [`x' = ${x1}` , `x'' = ${x2}`].join("\n")
+       return [x1, x2]
     }
 
-    console.log(bascara(a,b,c,delta))
+
+    let [x1,x2] = bascara(a,b,c,delta)
+    console.log(`x' = ${x1}\nx'' = ${x2}`)
     
     </script>
 </body>
