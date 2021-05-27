@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1) Crie uma função lerNumero() que vai pedir um número até que
+        //     o usuário informe um valor númerico.        
+
+
+        function lerNumero(){
+            while(true){
+                let numero = +prompt("Digite um número")
+                if(isFinite(numero) == true){
+
+                return
+                } else {
+
+                alert("Digite um número válido")
+                }
+            }
+        }
+        lerNumero()
+    </script>
+</body>
+</html>

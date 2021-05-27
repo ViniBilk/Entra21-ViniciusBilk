@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 2) Crie uma função que vai gerar um valor aleatório com base
+        //     nos limites minimo e máximo passados como parâmetro.
+        //     random(minimo, maximo)
+
+        function pedirNumeros(){
+            while (true){
+            let max = +prompt("Digete o valor máximo")
+                min = +prompt("Digite o valor mínimo")
+
+                if(isFinite(max) == true && isFinite(min) == true){
+                    if(min > max){
+                        let aux = min
+                        min = max
+                        max = aux
+                    }
+                    return [max,min]
+                } else {
+                    alert("Por favor digite valores válidos")
+                }
+            }
+        }
+
+        function geraradordeNumeros(){ 
+                let [max,min] = pedirNumeros(),
+                    aleatorio = (Math.random() * (max - min) + min).toFixed()
+                return console.log(aleatorio)
+        }
+
+        geraradordeNumeros()
+    </script>
+</body>
+</html>
