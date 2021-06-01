@@ -1,0 +1,49 @@
+.preto  {
+    position: relative;
+            top: 10px;
+            border: none;
+            height: 5px;
+            background: black;
+            margin-bottom: 50px;
+            border-radius: 10px;
+}
+
+.transparente {
+    position: relative;
+    top: 10px;
+    height: 5px;
+    background: rgb(105, 105, 105);
+    margin-bottom: 50px;
+    border-radius: 10px;
+}
+
+h1 {
+    color: blue;
+    font-size: 50px;
+    text-transform: uppercase;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+img {
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+.poema {
+    text-align: center;
+    font-size: 30px;
+}
+
+body {
+    background-color: gray;
+}
+
+.autor {
+    text-align: center;
+    font-weight: bold;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
