@@ -1,0 +1,37 @@
+.título {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
+
+.texto {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
+
+.linkEsquerda {
+   float: left;
+   padding-left: 100px;
+
+}
+
+.linkDireita {
+    float:right;
+    padding-right: 100px;
+
+}
+
+.subtitulo {
+    text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20px;
+    
+}
