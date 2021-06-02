@@ -1,0 +1,19 @@
+table, th, td {
+    border-style: double;
+    color: black;
+    
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+.negrito   {
+    font-weight: bold;
+}
+
+
+
+
+

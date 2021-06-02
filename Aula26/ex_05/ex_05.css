@@ -1,0 +1,23 @@
+th {
+    background-color: rgb(9, 133, 117);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.cabeça {
+    background-color: rgb(148, 195, 189);
+}
+
+td {
+    border-top: solid white;
+    border-bottom: 1px solid white;
+    border-left: none;
+    border-right: none;
+    background-color: rgb(199, 222, 217);
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+table {
+    width: 60%;
+
+}

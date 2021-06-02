@@ -1,0 +1,15 @@
+th {
+    background-color: rgb(29, 254, 159);
+}
+
+.nacionais {
+    background-color: rgb(8, 128, 127);
+}
+
+.cabeça {
+    background-color: rgb(172, 172, 172);
+}
+
+td, th, tr {
+    border: inset;
+}
