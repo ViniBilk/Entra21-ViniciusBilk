@@ -24,7 +24,7 @@
                     <br>
                     responsive site template freebie
                     <br>
-                    crafted by <a href="#">HTML5 UP.</a>
+                    crafted by <a class="link" href="#">HTML5 UP.</a>
                 </p>
         </div>
     </header>
@@ -32,9 +32,7 @@
     <main>
         <section>
             <header>
-                <h2>Ipsum lorem dolor aliquam ante commodo
-                    <br>
-                    magna sed accumsan arcu neque.
+                <h2>Ipsum lorem dolor aliquam ante commodo magna sed accumsan arcu neque.
                 </h2>
             </header>
 
@@ -43,15 +41,15 @@
             </p>
 
             <footer>
-                <button><a href="#">Learn More</a></button>
+                <a id="learn_more_button" href="#">Learn More</a>
             </footer>
         </section>
 
-        <section>
-            <header>
-                <h2>Recent Work</h2>
-            </header>
-            <ul>
+    <section class="portifolio">
+        <header class="header_portifolio">
+            <h2>Recent Work</h2>
+        </header>
+            <ul class="portifolio_img">
                 <li>
                     <img src="https://html5up.net/uploads/demos/strata/images/thumbs/01.jpg" alt="Street">
                     <h3>Magna sed consequat tempus</h3>
@@ -83,23 +81,32 @@
                     <p>Lorem ipsum dolor sit amet nisl sed nullam feugiat.</p>
                 </li>
             </ul>
-
-            <button><a href="#">Full Portfolio</a></button>
+                <a id="learn_more_button" href="#">Full Portfolio</a>
         </section>
 
         <section>
                 <header>
                     <h3>Get In Touch</h3>
-                    <p>Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
+                    <p class="text_1">Accumsan pellentesque commodo blandit enim arcu non at amet id arcu magna. Accumsan orci faucibus id eu lorem semper nunc nisi lorem vulputate lorem neque lorem ipsum dolor.</p>
                 </header>
                 <div>
-                    -
-                    <input type="submit" value="Send Menssage">
+                    <input id="learn_more_button" type="submit" value="Send Menssage">
                 </div>
 
-                <div>
-                    <ul>
-                        <li><i class="bi bi-house"></i>
+                <div class="form">
+                    <form action="action.js"></form>
+
+                    <input type="text" name="name" id="name" placeholder="Name">
+
+                    <input type="email" name="email" id="email" placeholder="Email">
+
+                    <textarea name="message" id="message" placeholder="Message" rows="10"></textarea>
+
+                </div>
+
+                <div >
+                    <ul class="contact">
+                        <li class="apenas_teste"><i class="bi bi-house"></i>
                             1234 Somewhere Rd.
                             <br>
                             Nashville, TN 00000
@@ -109,29 +116,27 @@
                         <li><i class="bi bi-phone"></i>
                             000-000-0000</li>
                         <li><i class="bi bi-envelope-open"></i>
-                        <a href="#">hello@untitled.tld</a></li>
+                        <a class="link" id="email_link"href="#">hello@untitled.tld</a></li>
                     </ul>
                 </div>
         </section>
     </main>
 
-    <ul>
-        <li><a href="#"><i class="bi bi-twitter"></i></a></li>
-        <li><a href="#"><i class="bi bi-facebook"></i></a></li>
-        <li><a href="#"><i class="bi bi-instagram"></i></a></li>
-        <li><a href="#"><i class="bi bi-globe"></i></a></li>
-        <li><a href="#"><i class="bi bi-bootstrap"></i></a></li>
-    </ul>
-    <footer>
-        <ul>
+ 
+
+    <footer class="footer_final">
+        <ul class="icons">
+            <li><a href="#"><i class="bi bi-twitter"></i></a></li>
+            <li><a href="#"><i class="bi bi-facebook"></i></a></li>
+            <li><a href="#"><i class="bi bi-instagram"></i></a></li>
+            <li><a href="#"><i class="bi bi-globe"></i></a></li>
+        </ul>
+        <ul class="footer_contact">
             <li>© Untitled</li>
-            <li>Design: <a href="#">HTML5 UP.</a></li>
-            <li>Demo Images: <a href="#">Unsplash</a></li>
+            <li>Design: <a id="footer_link"class="link "href="#">HTML5 UP.</a></li>
+            <li>Demo Images: <a id="footer_link" class="link" href="#">Unsplash</a></li>
         </ul>
     </footer>
-
-
-
 
 </body>
 </html>
