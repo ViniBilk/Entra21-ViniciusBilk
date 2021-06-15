@@ -157,25 +157,30 @@ h1{
     font-size: 14px;
 }
 
-.content{
+.principal {
     display: flex;
-    justify-content: space-around;
-    padding: 5em 0 5em 0;
+    justify-content: space-evenly;
     background-color: teal;
+    padding: 5em 0 5em 0;
 }
 
-.content_1 {
-    display: flex;
-    flex-wrap: wrap;
+.images_1 {
+    width: 50%;
+    list-style: none;
+    display: grid;
+    grid-column: 200px 100px;
+    grid-row: 100px 100px;
+
 }
 
-.mouse{
-    display: flex;
-    flex-wrap: wrap;
+
+.text_1 {
+    width: 50%;
 }
 
-
-
+.text_1 p {
+    font-size: 16px;
+}
 
 
 
