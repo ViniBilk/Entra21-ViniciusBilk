@@ -16,7 +16,11 @@ li {
     list-style: none;
 }
 
-img {
+ul {
+    margin: 0;
+}
+
+img, textarea {
     max-width: 100%;
 }
 
@@ -69,6 +73,7 @@ h2{
 }
 
 main {
+    box-sizing: border-box;
     display:flex;
     flex-flow: column wrap;
     align-items: center;
@@ -83,9 +88,13 @@ main {
     line-height: 1.75em;
 }
 
-#learn_more_button {
-    display: flex;
-    justify-content: center;
+/* input [type="submit"]{
+    width: 100%;
+} */
+
+.learn_more_button {
+    display: block;
+    text-align: center;
     background-color: transparent;
     color: #787878;
     text-decoration: none;
@@ -124,6 +133,7 @@ main {
 
 .portifolio_img li{
     text-align: left;
+    width: 100%;
     margin-bottom: 32px;
 }
 
@@ -224,11 +234,15 @@ h3{
     font-size: 16px;
 }
 
-
-.form{
-    display: flex;
-    flex-wrap: wrap;
+.form {
+    box-sizing: border-box;
 }
+
+.email_name {
+    display: flex;
+    flex-direction: column;
+}
+
 .form input{
     height: 2.75em;
     background: #f7f7f7;
@@ -236,28 +250,75 @@ h3{
     border: solid 2px #a2a2a2;
     color: inherit;
     padding: 0 0.75em;
-    width: 100%;
     margin-top: 1rem;
     font-size: 16px;
     color: #a2a2a2;
     font-family: 'Source Sans Pro', sans-serif;
     opacity: 0.5;
 }
+
 
 .form:nth-child(3) {
     margin-top: 1rem;
 }
 
 #message {
+    box-sizing: border-box;
     background: #f7f7f7;
     border-radius: 0.35em;
     border: solid 2px #a2a2a2;
     color: inherit;
     padding: 0 0.75em;
+    display: block;
+    outline: 0;
     width: 100%;
     margin-top: 1rem;
     font-size: 16px;
     color: #a2a2a2;
     font-family: 'Source Sans Pro', sans-serif;
     opacity: 0.5;
+}
+
+@media screen and (min-width: 450px){
+
+    .learn_more_button {
+        display: flex;
+        justify-content: space-around;
+        border: solid 3px #efefef;
+        width: 100px;
+        text-align: center;
+    }
+
+
+    .portifolio_img{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr 0.5fr;
+        grid-gap: 5%;
+    }
+
+    main{
+        box-sizing: border-box;
+        padding: 2.25em 1.5em 2.25em 1.5em;
+    }
+
+}
+
+@media screen and (min-width: 769px){
+    .email_name {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .email_name input {
+        width: 50%;
+    }
+    
+    #email {
+        margin-left: 0.5rem;
+    }
+}
+
+@media screen and (min-width: 1025px){
+    
 }
