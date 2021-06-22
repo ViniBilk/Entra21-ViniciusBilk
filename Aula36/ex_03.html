@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 3 - Escreva o script necessário para adicionar em cada <li> o número de descendentes (se houver).
+        <ul>
+            <li>Animais
+                <ul>
+                    <li>Mamíferos
+                        <ul>
+                            <li>Vacas</li>
+                            <li>Macacos</li>
+                            <li>Cachorros</li>
+                            <li>Tigres</li>
+                        </ul>
+                    </li>
+                    <li>Outros
+                        <ul>
+                            <li>Cobras</li>
+                            <li>Pássaros</li>
+                            <li>Lagartos</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        Resultado esperado:
+        <ul>
+            <li>Animais [9]
+                <ul>
+                    <li>Mamíferos [4]
+                        <ul>
+                            <li>Vacas</li>
+                            <li>Macacos</li>
+                            <li>Cachorros</li>
+                            <li>Tigres</li>
+                        </ul>
+                    </li>
+                    <li>Outros [3]
+                        <ul>
+                            <li>Cobras</li>
+                            <li>Pássaros</li>
+                            <li>Lagartos</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul> -->
+
+        <ul>
+            <li>Animais
+                <ul>
+                    <li>Mamíferos
+                        <ul>
+                            <li>Vacas</li>
+                            <li>Macacos</li>
+                            <li>Cachorros</li>
+                            <li>Tigres</li>
+                        </ul>
+                    </li>
+                    <li>Outros
+                        <ul>
+                            <li>Cobras</li>
+                            <li>Pássaros</li>
+                            <li>Lagartos</li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+</body>
+    <script>
+        let  animais = document.querySelectorAll("li:first-child li")
+        let animals = document.querySelector("li:first-child")
+        animals.firstChild.data += [animais.length]
+        console.log(animais)
+
+        let mamiferos = document.querySelectorAll("li:first-child li:first-child li")
+        let mamifero = document.querySelector("li:first-child li:first-child")
+        mamifero.firstChild.data += [mamiferos.length]
+        console.log(mamiferos)
+
+        let outros = document.querySelectorAll("li:first-child li:last-child li")
+        let outro = document.querySelector ("li:first-child li:last-child ")
+        outro.firstChild.data += [outros.length]
+        console.log(outros)
+    </script>
+
+
+</html>

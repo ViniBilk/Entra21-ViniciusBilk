@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1 - Crie uma função clear(elem) que remove todos os filhos de um elemento.
+
+    Utilize o seguinte HTML para testar:
+    <ol id="elem">
+        <li>Filho 1</li>
+        <li>Filho 2</li>
+    </ol> -->
+
+
+    <ol id="elem">
+        <li>Filho 1</li>
+        <li>Filho 2</li>
+    </ol> -->
+</body>
+<script>
+    function clear(elem) {
+        let lista = document.querySelectorAll("ol li")
+        for(item of lista){
+            console.log(item)
+            item.remove()
+        }
+    }
+
+    clear(elem) 
+</script>
+</html>

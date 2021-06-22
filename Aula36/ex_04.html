@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .notificacao {
+        top: 10px;
+        right: 10px;
+        background-color: aqua;
+        width: 20px;
+        height: 10px;
+    }
+
+</style>
+<body>
+    
+    <!-- Crie uma função que crie e mostre uma notificação na tela (<div class="notificacao">) quando for chamada.
+        Essa função deve receber um objeto com as seguintes propriedades:
+        {
+            top: 10px, // 10px será usado como valor default
+            right: 10px, // 10px será usado como valor default
+            html: "Olá", // "Olá" será usado como valor default            
+        }    -->
+
+        <div></div>
+</body>
+<script>
+    function notication(){
+        let div = (document.querySelector("div"))
+        div.classList.add("notificacao")
+    }
+
+    notication()
+</script>
+</html>

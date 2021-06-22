@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 2 - Insira <li>Item 2</li><li>Item 3</li> na seguinte lista:
+        <ul>
+            <li>Item 1</li>
+            <li>Item 4</li>
+        </ul>
+
+        Insira os elementos na ordem correta. -->
+
+        <ul>
+            <li>Item 1</li>
+            <li>Item 4</li>
+        </ul>
+
+</body>
+    <script>
+        let item1 = document.querySelector("ul li:first-child")
+        item1.insertAdjacentHTML("afterend", "<li>Item 3</li>")
+        item1.insertAdjacentHTML("afterend", "<li>Item 2</li>")
+    </script>
+
+</html>
