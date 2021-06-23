@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #div-legenda {
+            width: 300px;
+            height: 300px;
+            background-color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- Exercício
+
+    Crie uma função mostraLegenda(elemento, posicao, texto) que posiciona uma div em 
+    relação ao elemento informado com o texto informado.
+
+    Utilize o seguinte HTML para testar -->
+       
+    <body>            
+        <div id="div-legenda">Adicione uma legenda nesse elemento</div>
+        <div id="legenda"></div>
+        <script>
+            let elemento = document.getElementById("div-legenda")
+            let legenda = document.getElementById("legenda")
+            let texto = "olá"
+   
+            function mostraLegenda(elemento, posicao, texto) {
+                legenda.style.cssText = "position: absolute; color: red;"
+
+                let coords = obterCoordenadas(elemento)
+                let position = posicao()
+
+                if(position == "right"){  
+
+                    legenda.style.left = coords.right + "px"
+                    legenda.style.top = coords.bottom + "px"
+
+                } else if (position == "left"){
+                    legenda.style.left = coords.left -20 + "px"
+                    legenda.style.top = coords.bottom + "px"
+                }
+
+               
+
+                legenda.innerHTML = texto
+
+                return legenda
+            }
+
+            function posicao(){
+             let posicao = +prompt("1 - Direita \n2- Esquerda\n3-Abaixo\n4-Acima")
+
+                switch(posicao){
+                    case 1:
+                    return "right"
+
+                    case 2: 
+                    return "left"
+
+                    case 3:
+                    return "below"
+
+                    case 4:
+                    return "above"
+                }
+               
+            }
+
+            function obterCoordenadas(elemento) {
+                let coords = elemento.getBoundingClientRect()
+
+                return {
+                    top: coords.top,
+                    right: coords.right ,
+                    bottom: coords.bottom ,
+                    left: coords.left 
+                }
+            }
+
+            mostraLegenda(elemento,posicao,texto)
+
+
+        </script>
+    </body>
+</body>
+</html>
