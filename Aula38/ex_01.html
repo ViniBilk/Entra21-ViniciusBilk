@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1)
+    <ul>
+        <li>Primeiro Item</li>
+        <li>Segundo Item</li>
+        <li>Terceiro Item</li>
+        <li>Quarto Item</li>
+        <li>Quinto Item</li>
+    </ul>
+
+    Crie uma lista selecionável (quando clicar em uma li a cor muda)
+    Se segurar a tecla Ctrl o elemento é selecionado em conjunto com os elementos já selecionados -->
+
+    <ul>
+        <li data-info="false">Primeiro Item</li>
+        <li data-info="false">Segundo Item</li>
+        <li data-info="false">Terceiro Item</li>
+        <li data-info="false">Quarto Item</li>
+        <li data-info="false">Quinto Item</li>
+    </ul>
+
+    <style>
+        table {
+            background-color: black;
+            border-collapse: collapse;       
+            font-size: 2rem;     
+        }
+
+        td {
+            color: white;
+            padding: 20px;
+            border: 1px solid white;      
+        }
+
+        .marcar {
+            background-color: red;
+        }
+    </style>
+
+    <script>
+        let tdSelecionada,
+            table = document.querySelector("ul")
+
+        table.addEventListener("click", (event) => {
+            let target = event.target // Em que elemento o clique aconteceu
+
+            marcar(target)
+        })
+
+        function marcar(td) {
+            if (tdSelecionada) {
+                tdSelecionada.classList.remove("marcar")
+            }
+
+            tdSelecionada = td
+            tdSelecionada.classList.add("marcar")
+        }
+
+
+        
+        
+    </script>
+</body>
+</html>

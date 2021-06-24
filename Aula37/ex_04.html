@@ -74,7 +74,7 @@
             container.addEventListener("click", (event) => {
                 let target = event.target 
 
-                if (!target.tagName == "button") return
+                if (target.className != "remove-button") return
 
                 deletar(target)
             })
