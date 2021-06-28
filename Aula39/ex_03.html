@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Exercício
+
+    Crie um página da web que permita receber um valor inicial
+    de depósito, a quantidade de meses que esse dinheiro ficará
+    depositado e a porcentagem de juros ao ano.
+    Mostre quanto o dinheiro rendeu nesse período.
+
+    Fórmula:
+    resultado = Math.round(inicial * (1 + juros * anos))
+    
+    Onde:
+        inicial - valor inicial.
+        juros - porcentagem de juros. Ex.: 10%.
+        anos - tempo que o valor ficará depositado.
+    
+    */ -->
+    <form>
+        <label for="inicial">
+            Valor Inicial
+            <input type="text" name="inicial" id="inicial" value="10000">
+        </label>
+        <br>
+        <label for="juros">
+            <input type="text" name="juros" id="juros" value="10%">
+            Juros
+        </label>
+        <label for="anos">
+            <input type="text" name="anos" id="anos" value="5">
+            Anos
+        </label>
+
+        <input type="submit">
+    </form>
+
+    <script>
+        let form = document.querySelector("form")
+
+        let inicial = form.inicial,
+            juros = form.juros,
+            anos = form.anos
+                
+        form.addEventListener("input" , (event) => {
+            let valorInical = parseInt(inicial.value),
+                juros = parseInt(juros.value),
+                anos = parseInt(anos.value),
+                resultado = Math.round(inicial * (1 + juros * anos))
+
+            console.log(resultado)
+        })
+    </script>
+</body>
+</html>

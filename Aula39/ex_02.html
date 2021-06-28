@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        pre {
+            display: inline-block;    
+            margin: 0px;
+            position: absolute;
+            top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 2) Crie uma div que tenha o seguinte conteúdo:
+         _   _
+        (q\_/p)
+         /. .\
+        =\_t_/=   __
+         /   \   (
+        ((   ))   )
+        /\) (/\  /
+        \  Y  /-'
+         nn^nn
+
+        Quando você clicar na div torne ela selecionável e faça ela se mover de acordo com o
+        as setas do teclado. -->
+
+    
+<pre>
+  _   _
+ (q\_/p)
+  /. .\
+ =\_t_/=   __
+  /   \   (
+ ((   ))   )
+ /\) (/\  /
+ \ º|º /-'
+  nn^nn
+</pre>   
+
+<script>
+    let ratoObeso = document.querySelector("pre")
+    ratoObeso.tabIndex = 0
+
+    ratoObeso.style.top = 0  + "px"
+    ratoObeso.style.left = 0 + "px"
+
+
+    ratoObeso.addEventListener("click" , (event) => {
+        ratoObeso.focus()
+    })
+
+    ratoObeso.addEventListener("keydown" , (event) => {
+        let key = event.key,
+            tamanhodoRato = ratoObeso.clientHeight,
+            lateralDoRato = ratoObeso.clientWidth
+
+        if(key == "ArrowDown"){
+            ratoObeso.style.top = parseInt(ratoObeso.style.top) + tamanhodoRato + "px"
+        } else if (key == "ArrowUp"){
+            ratoObeso.style.top = parseInt(ratoObeso.style.top) - tamanhodoRato + "px"
+        } else if (key == "ArrowRight"){
+            ratoObeso.style.left = parseInt(ratoObeso.style.left) + lateralDoRato + "px"
+        } else if (key == "ArrowLeft"){
+            ratoObeso.style.left = parseInt(ratoObeso.style.left) - lateralDoRato + "px"
+        }
+    })
+</script>
+        
+</body>
+</html>

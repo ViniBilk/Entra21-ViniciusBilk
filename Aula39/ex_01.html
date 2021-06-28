@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #elem {
+        text-align: center;
+        width: 100%;
+        border: 1px solid black;
+    }
+    
+
+    
+
+</style>
+<body>
+    <!-- 1) Crie uma <div> que se torne em uma <textarea> quando clicada.
+        A <textarea> permite editar o HTML da <div>
+        Quando o usuário pressionar Enter ou sair da <textarea>, ela
+        volta a ser uma <div> com o conteúdo alterado na <textarea>/ -->
+
+    <div id="elem">Clica no pai</div>
+    <textarea name="text-area" id="texto" cols="268" rows="10"></textarea>
+
+
+    <script>
+        let elem = document.querySelector("#elem"),
+            text = document.querySelector("#texto")
+        
+        text.hidden = true
+        elem.tabIndex = 0
+
+        elem.addEventListener("focus", (event) => {
+            elem.hidden = true
+            text.hidden = false
+        })
+
+        text.addEventListener("blur", (event) => {
+            elem.hidden = false
+            let textoDentro = text.value
+            elem.innerHTML = textoDentro
+            text.hidden = true
+        })
+    </script>
+</body>
+</html>
