@@ -4,6 +4,36 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
+    <style>
+        form {
+            padding: 1rem;
+            width: 50vw;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #a2a2a2;
+            border-radius: 10px;
+        }
+
+        h1{
+            font-size: 5rem;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            background-color: yellow;
+            padding: 1rem 0.5rem;
+            border-radius: 17px;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
 </head>
 <body>
     <!-- Exercício
@@ -22,21 +52,24 @@
         anos - tempo que o valor ficará depositado.
     
     */ -->
+
+    <h1>Banco Do Brasil Site Oficial Sem vírus (Confia)</h1>
     <form>
+        Valor Inicial
         <label for="inicial">
-            Valor Inicial
             <input type="text" name="inicial" id="inicial" value="10000">
         </label>
         <br>
+        Juros
         <label for="juros">
             <input type="text" name="juros" id="juros" value="10%">
-            Juros
         </label>
+        <br>
+        Anos
         <label for="anos">
             <input type="text" name="anos" id="anos" value="5">
-            Anos
         </label>
-
+        <br>
         <input type="submit">
     </form>
 
@@ -45,16 +78,19 @@
 
         let inicial = form.inicial,
             juros = form.juros,
-            anos = form.anos
-                
-        form.addEventListener("input" , (event) => {
-            let valorInical = parseInt(inicial.value),
-                juros = parseInt(juros.value),
-                anos = parseInt(anos.value),
-                resultado = Math.round(inicial * (1 + juros * anos))
+            anos = form.anos  
 
-            console.log(resultado)
-        })
+
+        function calculaJuros() {
+            let valorInicial = parseInt(inicial.value),
+                juros2 = parseInt(juros.value),
+                anos2 = parseInt(anos.value),
+                resultado = Math.round(valorInicial * (1 + (juros2 / 100) * anos2))
+
+            alert(`No Periodo de ${anos2} anos\nO valor inicial de ${valorInicial}\n\nRendeu: ${resultado}`)
+        }
+                
+        form.addEventListener("submit" , calculaJuros)
     </script>
 </body>
 </html>
