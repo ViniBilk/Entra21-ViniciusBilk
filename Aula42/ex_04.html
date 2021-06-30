@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 4) Escreva uma função obtemSegundos() que retorna o número de segundos
+    do dia atual.
+
+    Exemplo: 10:00 am -> obtemSegundos() == 36000 -->
+
+</body>
+<script>
+    let data = new Date,
+        hora = data.getHours(),
+        minutos = data.getMinutes()
+
+    function obtemSegundos(){
+        let horaSegundos = hora * 3600,
+            minutosSegundos = minutos * 60,
+            resultado = horaSegundos + minutosSegundos
+
+            console.log(resultado)
+    }
+
+    obtemSegundos()
+</script>
+</html>
