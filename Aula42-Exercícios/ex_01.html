@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1) Escreva a função imprimeNumeros(comeco, fim) que mostre um número a cada segundo, começando
+    do comeco até o fim. -->
+</body>
+
+<script>
+    let comeco = 1,
+        fim = 10,
+        contador = comeco
+
+    function imprimeNumeros(comeco,fim){
+        while(contador < fim){
+            contador++
+            console.log(contador)
+            return
+        }
+    }
+
+    // let idInterval = setInterval(imprimeNumeros, 1000 , comeco , fim)
+    for(let i = 0; i < fim;i ++){
+        let idTimer = setTimeout(imprimeNumeros, 1000 * i, comeco, fim)
+    }
+
+
+</script>
+</html>

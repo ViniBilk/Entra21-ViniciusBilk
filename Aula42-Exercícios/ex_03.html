@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!--Data desta colagem 01/07/2021 16:00:00-->
+    <!-- 3) Faça uma cronômetro através da função criaCronometro(tempo, callback) que receba o valor inicial através de um <input type="time"> 
+    e dispare uma função callback quando o tempo acabar. -->
+    <input type="time" id="time" value="10:01:09">
+    <button id="submit">Ai pai para (meme)ඞ</button>
+    <script>
+
+        let time = document.querySelector("#time"),
+            submit = document.querySelector("#submit"),
+            tempo = time.value
+
+        let tempoVetor = tempo.split(":"),
+            hora = tempoVetor[0],
+            minuto = tempoVetor[1],
+            segundo = tempoVetor[2]
+
+        function criaCronometro(tempo, callback) {
+          
+        }   
+
+    </script>
+</body>
+</html>
