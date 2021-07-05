@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1) Escreva a classe Aluno. Cada objeto dessa classe deve guardar os seguintes dados:
+        - matrícula,
+        - nome
+        - 2 notas de prova
+        - 1 nota de trabalho
+
+        Essa classe deve ter 2 métodos:
+        - media: calcula a média final do aluno (cada prova tem peso 3 e o trabalho tem peso 2)
+        - final: calcula quanto o aluno precisa para a prova final (retorna zero se ele não for para a final)
+         -->
+         <script>
+            class Aluno {                
+                constructor(nome,matricula,notasProva,notaTrabalho){
+                    this.nome = nome
+                    this.matricula = matricula
+                    this.notasProva = notasProva
+                    this.notaTrabalho = notaTrabalho                     
+                }
+
+                
+                media() {
+                    let nota1 = Number(this.notasProva[0]),
+                        nota2 = Number(this.notasProva[1])
+
+                    let mediaPonderada =  [(nota1 * 3) + (nota2 * 3) + (this.notaTrabalho * 2)] / (3 + 3 + 2)
+
+                    return mediaPonderada
+                }
+
+                final() {
+                    let media = this.media(),
+                        nota1 = Number(this.notasProva[0]),
+                        nota2 = Number(this.notasProva[1])
+
+                    if( media < 6){
+                        console.log("Reprovo Bro")
+                    }else {
+                        console.log("Ta passado Amigão")
+                    }
+                }
+            }
+
+            //Sweet Dreams
+            // let x  = 1
+            //             let falta = [(nota1 * 3) + (nota2 * 3) + (this.notaTrabalho * 2) + (x * 2)] / (10 * 6)
+            //             console.log(falta)
+         </script>
+</body>
+</html>

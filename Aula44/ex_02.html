@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 2) Crie uma classe Agenda que pode armazenar 10 pessoas e que seja capaz de realizar as 
+    seguintes operações:
+    - armazenaPessoa(nome, telefone)
+    - removePessoa(nome)
+    - buscaPessoa(nome) -> Informa o número de telefone da pessoa
+    - imprimeAgenda() -> Imprime os dados de todas as pessoas da agenda
+    - imprimePessoa(indice) -> Imprime os dados da pessoa que está na posição "i" da agenda -->
+
+    <script>
+        class Pessoa {
+            constructor(nome, telefone) {
+                this.nome = nome
+                this.telefone = telefone
+            }
+        }
+
+        class Agenda {
+
+            constructor() {
+                this.listaPessoa = []
+            }
+
+            removePessoa(nome){
+                for(let i = 0;i < this.listaPessoa.length;i++){
+                    if(nome == this.listaPessoa[i].nome){
+                            this.listaPessoa.splice(i, 1)
+                            break
+                    }
+                }
+            }
+
+            imprimePessoa(indice){
+                for(let i = 0;i <= this.listaPessoa.length;i++){
+                    if(i == indice){
+                        let nome = this.listaPessoa[indice].nome,
+                            telefone = this.listaPessoa[indice].telefone
+                            console.log(`Nome: ${nome} | Telefone: ${telefone}`)
+                            break  
+                    } else if (i == this.listaPessoa.length){
+                        console.log("Digite um índice válido")
+                    }
+                }
+            }
+
+            buscaPessoa(nome){
+                for(let i = 0;i < this.listaPessoa.length;i++){
+                    if(nome == this.listaPessoa[i].nome){
+                            console.log(this.listaPessoa[i].telefone)
+                    }
+                }
+            }
+
+            armazenarPessoa(nome, telefone){
+                if(this.listaPessoa.length <= 9){
+                    this.listaPessoa.push(new Pessoa(nome, telefone))
+                } else {
+                    console.log("Não Há Mais Espaço na Agenda")
+                }
+            }         
+
+            imprimeAgenda() {
+                for (let pessoa of this.listaPessoa) {
+                    console.log(`Nome: ${pessoa.nome} | Telefone: ${pessoa.telefone}`)
+                }
+            }
+        }
+
+        let agenda = new Agenda()
+        agenda.armazenarPessoa("João", "(47) 9 9999-9999")
+        agenda.armazenarPessoa("Maria", "(47) 9 9999-3999")
+        agenda.armazenarPessoa("João", "(47) 9 8999-9999")
+        agenda.armazenarPessoa("Rodrigo", "(47) 9 8989-9799")
+        agenda.armazenarPessoa("Paulo", "(47) 9 8799-9999")
+
+
+    </script>
+</body>
+</html>
