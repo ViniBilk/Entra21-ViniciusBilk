@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 4) Crie uma classe Animal que possua os seguintes atributos:
+    - nome
+    - comprimento
+    - numeroPatas
+    - cor
+    - ambiente
+    - velocidadeMedia
+
+    Essa classe deve possuir o método mostrarDados()
+    que mostra um relatório contendo as informações do Animal.
+
+    Crie uma classe Peixe que herda de animal e possua o atributo
+    caracteristica. Essa classe deve implementar o método mostrarDadoPeixe()
+    que mostra um relatório contendo as informações do Peixe.
+
+    Crie uma classe Mamifero que herda de animal e possua o atributo
+    alimento. Essa classe deve implementer o método mostrarDadosMamifero()
+    que mostra um relatório contendo as informações do Mamífero.
+
+    Após isso crie um objeto de cada classe e teste os métodos. -->
+    <script>
+
+        class Animal {
+            constructor(nome, comprimento, numeroPatas, cor, ambiente, velocidadeMedia) {
+                this.nome = nome
+                this.comprimento = comprimento
+                this.numeroPatas = numeroPatas
+                this.cor = cor
+                this.ambiente = ambiente
+                this.velocidadeMedia = velocidadeMedia
+            }
+
+            mostrarDados() {
+                console.log(`Nome: ${this.nome}\nComprimento: ${this.comprimento}\nNumero de Patas: ${this.numeroPatas}\nCor: ${this.cor}\nAmbiente: ${this.ambiente}\nVelocidade Média: ${this.velocidadeMedia}`)
+            }
+        }
+
+        class Peixe extends Animal {
+            constructor(nome, comprimento, numeroPatas, cor, ambiente, velocidadeMedia, caracteristica){
+                super(nome, comprimento, numeroPatas, cor, ambiente, velocidadeMedia)
+                this.caracteristica = caracteristica
+            }   
+        
+            mostrarDadoPeixe() {
+                console.log(`Nome: ${this.nome}\nComprimento: ${this.comprimento}\nNumero de Patas: ${this.numeroPatas}\nCor: ${this.cor}\nAmbiente: ${this.ambiente}\nVelocidade Média: ${this.velocidadeMedia}\nCaracteristicas: ${this.caracteristica}`)
+            }
+        }
+
+        class Mamifero extends Animal {
+            constructor(nome, comprimento, numeroPatas, cor, ambiente, velocidadeMedia, alimento){
+                super(nome, comprimento, numeroPatas, cor, ambiente, velocidadeMedia)
+                this.alimento = alimento
+            }   
+        
+            mostrarDadoMamifero() {
+                console.log(`Nome: ${this.nome}\nComprimento: ${this.comprimento}\nNumero de Patas: ${this.numeroPatas}\nCor: ${this.cor}\nAmbiente: ${this.ambiente}\nVelocidade Média: ${this.velocidadeMedia}\nAlimento: ${this.alimento}`)
+            }
+        }
+
+        // let cachorro = new Animal("Cachorro", "29cm", "4", "Marrom", "Qualquer", "25km/h")
+        // let anxova = new Peixe("Anxova", "Depende", "N tem pata (eu acho)", "Sei lá kkk Roxo", "Água", "A mesma que um jet-sky", "sei la nunca vi uma kkkk")
+        // let tigre = new Mamifero("Tigre", "1,60m", "4", "Laranja e Preto", "Savana", "70km/h", "Humanos")
+
+
+    </script>
+</body>
+</html>

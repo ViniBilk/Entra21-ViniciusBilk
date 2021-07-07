@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 2) Dado os seguintes objetos:
+
+        let cabeca = {
+            oculos: 1
+        }
+
+        let mesa = {
+            caneta: 3
+        }
+
+        let cama = {
+            lenco: 1,
+            travesseiro: 2
+        }
+
+        let bolso = {
+            dinheiro: 200
+        }
+
+        - Use __proto__ para atribuir prototypes na seguinte ordem: bolso -> cama -> mesa -> cabeca.
+        Testes:
+        console.log(bolso.caneta) // 3
+        console.log(cama.oculos) // 1
+        console.log(mesa.dinheiro) // undefined -->
+
+        <script>
+             
+        let cabeca = {
+            oculos: 1
+        }
+
+
+        let mesa = {
+            caneta: 3
+        }
+
+        
+
+        let cama = {
+            lenco: 1,
+            travesseiro: 2
+        }
+
+       
+
+        let bolso = {
+            dinheiro: 200
+        }
+
+        
+        
+        cama.__proto__ = bolso
+        mesa.__proto__ = cama
+        cabeca.__proto__ = mesa
+    
+        </script>
+</body>
+</html>

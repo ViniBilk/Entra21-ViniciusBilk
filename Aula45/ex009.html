@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 1) Crie uma classe Ponto2D para representar um ponto no espaço cartesiano. Essa classe
+    deve ter os atributos: x e y.
+    Essa classe deve ter o método estático temEixoComum(pontoA, pontoB) que retorna true
+    se as duas classes tiverem as mesmas coordenadas para algum dos eixos.
+    Exemplo:
+    (1, 2) e (1, -17) -> True
+    (13, -8) e (8, -22) -> False -->
+    <script>
+         
+        class Ponto2D {
+            constructor(x, y) {
+                this.x = x
+                this.y = y
+            }
+
+            static compararAB(pontoA, pontoB) {
+                return pontoA.x === pontoB.x || pontoA.y === pontoB.y
+            }
+        }
+
+        const pontoA = new Ponto2D(10, 2),
+              pontoB = new Ponto2D(9, 3)
+
+        console.log(Ponto2D.compararAB(pontoA, pontoB))
+        
+    </script>
+</body>
+</html>
