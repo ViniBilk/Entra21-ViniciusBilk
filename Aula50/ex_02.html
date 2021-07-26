@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>RTo</h1>
+    <script>
+        // 2) Crie uma função dobrarEm5Segundos(numero, cb) que dobre o valor de um número após 5 segundos. Se o valor recebido não for um número
+        // ele irá chamar a cb passando um erro. 
+
+        // callback(error, result) => Se um erro for passado irá mostrar a mensagem: "A operação falhou! [mensagem do erro]".
+        // Senão, irá mostrar a mensagem: "A operação foi bem sucedida! O resultado é [result]".
+
+        
+        function somar(n1,callback){
+            let soma = n1 * 2
+
+            setTimeout(() => {
+                if(!Number.isInteger(soma)){
+                    callback(new Error("É numero não patrão"))
+                }else {
+                    callback(null, soma)
+                }
+            }, 5000)
+
+        }
+
+        function mostrarResultado(error, result) {
+            if (error) {
+                return console.log(`A operação Falhou! ${error.message}`);
+            }
+
+            console.log(`A operação foi bem sucedida! O resultado é ${result}`)
+        }
+
+        somar(80,mostrarResultado)
+
+    </script>
+</body>
+</html>
