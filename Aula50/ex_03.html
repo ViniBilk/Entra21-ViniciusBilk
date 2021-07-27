@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const delay = () => new Promise(resolve => setTimeout(resolve, 1000));
+
+         function umPorSegundo() {
+            delay().then(() => {
+                console.log('1s');
+                delay().then(() => {
+                    console.log('2s');
+                    delay().then(() => {
+                        console.log('3s');
+                    });
+                });
+            });
+        }
+
+        async function vaiquedaErrado() {
+            try{
+                let contador = await umPorSegundo();
+            } catch (errror){
+                console.log(`A operação Falhou! ${error.message}`);
+            }
+            
+        }
+
+        vaiquedaErrado()
+    </script>
+</body>
+</html>
