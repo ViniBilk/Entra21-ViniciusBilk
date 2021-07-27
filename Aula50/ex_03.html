@@ -7,30 +7,21 @@
 </head>
 <body>
     <script>
-        const delay = () => new Promise(resolve => setTimeout(resolve, 1000));
+            const delay = () => new Promise(resolve => setTimeout(resolve, 1000));
 
-         function umPorSegundo() {
-            delay().then(() => {
-                console.log('1s');
+            function umPorSegundo() {
                 delay().then(() => {
-                    console.log('2s');
+                    console.log('1s');
                     delay().then(() => {
-                        console.log('3s');
+                        console.log('2s');
+                        delay().then(() => {
+                            console.log('3s');
+                        });
                     });
                 });
-            });
-        }
-
-        async function vaiquedaErrado() {
-            try{
-                let contador = await umPorSegundo();
-            } catch (errror){
-                console.log(`A operação Falhou! ${error.message}`);
             }
-            
-        }
+            umPorSegundo();
 
-        vaiquedaErrado()
     </script>
 </body>
 </html>
