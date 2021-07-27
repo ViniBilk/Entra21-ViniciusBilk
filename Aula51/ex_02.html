@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 2) Implemente um script que consuma a api: https://rickandmortyapi.com/.
+        
+        // * Crie uma página que carregue 9 personagens aleatórios e os mostre em cards.
+        // * Crie uma página que permita selecionar um episódio e mostra todos os personagens que fizeram parte daquele episódio.       
+        // * Crie uma página que mostre todos os Ricks que estão vivos.
+
+        async function getRickandMorty() {
+            let armazenaNumeros = []
+            for(let i = 0;i < 10;i++){
+                let numero = Math.round(Math.random()* (671 - 1) + 1)
+                armazenaNumeros[i] = numero
+            }
+            
+            let stringNumbers = armazenaNumeros.join()
+            
+
+            let response = await fetch(`https://rickandmortyapi.com/api/character/${stringNumbers}`, {
+            });
+
+            if (!response.ok) {
+                return console.log("A requisição falhou!")
+            }
+
+            let body = await response.json();
+    
+            for(let i = 0;i < body.length; i++){
+                createRicandMorty(body[i].image)
+            }
+        }
+
+        function createRicandMorty(url) {
+            const img = document.createElement("img");
+
+            img.src = url;
+
+            document.body.append(img);
+        }
+
+        getRickandMorty();
+    </script>
+</body>
+</html>

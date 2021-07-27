@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1) Implemente um script que consuma a api: https://thecatapi.com/.
+
+        // * Crie uma página que carregue 10 imagens de um gato com base na sua raça.
+        // * Crie uma página que carregue 10 gifs de gatos.
+        
+        // async function getCat() {
+        //     let response = await fetch("https://api.thecatapi.com/v1/images/search?limit=10&page=10&breed_ids=beng", {
+        //         headers: {
+        //             "x-api-key": "ea2c9cfc-5fe7-46fa-adf1-9c741d90259a"
+        //         }
+        //     });
+
+        //     if (!response.ok) {
+        //         return console.log("A requisição falhou!")
+        //     }
+
+        //     let body = await response.json();
+
+        //         for(let i = 0; i < 10;i++){
+        //             createCatImage(body[i].url);
+        //         }
+        // }
+
+        // function createCatImage(url) {
+        //     const img = document.createElement("img");
+
+        //     img.src = url;
+
+        //     document.body.append(img);
+        // }
+
+        // getCat();
+
+        async function getCat() {
+            let response = await fetch("https://api.thecatapi.com/v1/images/search?limit=10&page=10&mime_types=gif", {
+                headers: {
+                    "x-api-key": "ea2c9cfc-5fe7-46fa-adf1-9c741d90259a"
+                }
+            });
+
+            if (!response.ok) {
+                return console.log("A requisição falhou!")
+            }
+
+            let body = await response.json();
+
+                for(let i = 0; i < 10;i++){
+                    createCatImage(body[i].url);
+                }
+        }
+
+        function createCatImage(url) {
+            const img = document.createElement("img");
+
+            img.src = url;
+
+            document.body.append(img);
+        }
+
+        getCat();
+    </script>
+</body>
+</html>
