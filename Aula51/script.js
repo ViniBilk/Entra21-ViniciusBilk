@@ -1,7 +1,7 @@
 
     // "https://rickandmortyapi.com/api/character/1".split("/").pop()
 
-        let numeroEpisodeo = document.getElementById("inputEpisode"),
+    let numeroEpisodeo = document.getElementById("inputEpisode"),
         sub = document.getElementById("sub")
 
     let global = document.getElementById("global")
@@ -14,8 +14,7 @@
         }
     })
 
-    function limpaElemento(elemento) {    
-        console.log(elemento);        
+    function limpaElemento(elemento) {        
         while (elemento.children.length) {
             console.log(elemento.chlidren);
             elemento.firstElementChild.remove();
@@ -61,12 +60,49 @@
         img.src = url;
         div.append(img);
 
-        for(let info of infos){
-            let p = document.createElement("p")
-            p.classList.add("info")
-            p.innerHTML = info
-            div.append(p);
+        addInfos(div,infos)
+    }
+
+    function addInfos(div,infos){
+        let p1 = document.createElement("p")
+        let p2 = document.createElement("p")
+        let p3 = document.createElement("p")
+        let p4 = document.createElement("p")
+        let p5 = document.createElement("p")
+        let nome = infos[0],
+            id = infos[1],
+            gender = infos[2],
+            specie = infos[3],
+            status = infos[4]
+
+        p1.innerHTML = "Name: "+ nome
+        p1.classList.add("name")
+        div.append(p1);
+
+        p2.innerHTML = "Id: "+ id
+        p2.classList.add("info")
+        div.append(p2);
+       
+        p3.innerHTML = "Gender: "+ gender
+        p4.classList.add("info")
+        div.append(p3);
+        
+        p4.innerHTML = "Specie: "+ specie
+        p4.classList.add("info")
+        div.append(p4);
+        
+        p5.innerHTML = "Status: "+ status
+        p5.classList.add("info")
+        div.append(p5);
+
+        if(status == "Alive"){
+            p5.style.color = "green"
+        }else if(status == "unknown"){
+            p5.style.color = "black"
+        }else {
+            p5.style.color = "red"
         }
+        
     }
 
     getRickandMorty();
