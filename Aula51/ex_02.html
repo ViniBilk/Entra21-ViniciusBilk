@@ -13,6 +13,8 @@
     </style>
 </head>
 <body>
+    <input type="number" name="inputEpisode" id="inputEpisode">
+    <input type="submit" name="sub" id="sub">
     <div id="global">
     </div>
     <script>
@@ -22,16 +24,48 @@
         // * Crie uma página que permita selecionar um episódio e mostra todos os personagens que fizeram parte daquele episódio.       
         // * Crie uma página que mostre todos os Ricks que estão vivos.
 
-        async function getRickandMorty() {
-            // let armazenaNumeros = []
+        // let armazenaNumeros = []
             // for(let i = 0;i < 10;i++){
             //     let numero = Math.round(Math.random()* (671 - 1) + 1)
             //     armazenaNumeros[i] = numero
             // }
             
             // let stringNumbers = armazenaNumeros.join()
-            
-            let response = await fetch(`https://rickandmortyapi.com/api/episode`, {
+
+        let numeroEpisodeo = document.getElementById("inputEpisode"),
+            sub = document.getElementById("sub")
+
+        let global = document.getElementById("global")
+
+        var invalidChars = ["-","+","e",]
+
+        numeroEpisodeo.addEventListener("keydown", (e) => {
+            if(invalidChars.includes(e.key)){
+                e.preventDefault()
+            }
+        })
+
+        function limpaElemento(elemento) {    
+            console.log(elemento);        
+            while (elemento.children.length) {
+                console.log(elemento.chlidren);
+                elemento.firstElementChild.remove();
+            }
+        }
+
+        sub.addEventListener("click", (event) =>{
+            if(numeroEpisodeo.value > 41){
+                return alert("Numero Inválido")
+            }else{
+                limpaElemento(global)
+                getRickandMorty(numeroEpisodeo.value)
+            }
+        })
+
+        async function getRickandMorty(episode) {
+            // "https://rickandmortyapi.com/api/character/1".split("/").pop()
+
+            let response = await fetch(`https://rickandmortyapi.com/api/episode/${episode}`, {
             });
 
             if (!response.ok) {
@@ -39,15 +73,19 @@
             }
 
             let body = await response.json();
-            let results = body.results
+            let characters = body.characters
     
-            for(let i = 0;i < results.length; i++){
-                createRicandMorty(results[i].url)
+            for(let i = 0;i < characters.length; i++){
+                let response1 = await fetch(`${body.characters[i]}`, {
+                    });
+
+                let body1 = await response1.json();
+                console.log(body1)
+                createRicandMorty(body1.image)
             }
         }
 
         function createRicandMorty(url) {
-            let global = document.getElementById("global")
             let div = document.createElement("div")
             div.classList.add("card")
             global.append(div)
@@ -57,8 +95,6 @@
 
             div.append(img);
         }
-
-        
 
         getRickandMorty();
     </script>
