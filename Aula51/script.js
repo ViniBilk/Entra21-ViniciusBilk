@@ -75,7 +75,7 @@
             specie = infos[3],
             status = infos[4]
 
-        p1.innerHTML = "Name: "+ nome
+        p1.innerHTML = nome
         p1.classList.add("name")
         div.append(p1);
 
