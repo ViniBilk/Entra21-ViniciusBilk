@@ -37,6 +37,8 @@ input::-webkit-inner-spin-button {
 .description {
     font-family: Arial, Helvetica, sans-serif;
     color: white;
+    width: 400px;
+    text-align: center;
 }
 
 .inputs{
@@ -44,7 +46,7 @@ input::-webkit-inner-spin-button {
     flex-direction: column;
     width: 100vw;
     height: fit-content;
-    margin-top: 20px;
+    margin-top: 0px;
     align-items: center;
 }
 
@@ -58,8 +60,8 @@ input::-webkit-inner-spin-button {
 
 .logoTop {
     position: relative;
-    width: 850px;
-    height: 358px;
+    width: 600px;
+    height: auto;
 }
 
 #global {
@@ -75,8 +77,8 @@ input::-webkit-inner-spin-button {
 position: absolute;
 width: 772px;
 height: 682px;
-left: 650px;
-top: 415px;
+left: 350px;
+top: 250px;
 z-index: 1000;
 }
 
@@ -88,8 +90,8 @@ z-index: 1000;
     position: relative;
     width: 507px;
     height: 399px;
-    left: 190px;
-    top: 150px;
+    left: 200px;
+    top: 50px;
     background: linear-gradient(239.17deg, rgba(255, 255, 255, 0.24) 2.6%, rgba(255, 255, 255, 0.0744) 93.81%);
     backdrop-filter: blur(24px);
     border-radius: 43px;
@@ -148,8 +150,8 @@ img {
     position: absolute;
     width: 717px;
     height: 717px;
-    left: 2100px;
-    top: 800px;
+    left: 1500px;
+    top: 550px;
     -webkit-animation: slide-right2 3s ease-in-out infinite alternate both;
     animation: slide-right2 3s ease-in-out infinite alternate both;
 }
@@ -168,7 +170,7 @@ img {
     position: absolute;
     width: 311.46px;
     height: 311.46px;
-    left: 2100px;
+    left: 1500px;
     top: 100px;
     -webkit-animation: slide-right2 3s ease-in-out infinite alternate both;
     animation: slide-right2 3s ease-in-out infinite alternate both;
@@ -176,10 +178,10 @@ img {
 
 .stars {
     position: absolute;
-    width: 1797px;
-    height: 976px;
-    left: 350px;
-    top: 150px;
+    width: 100vw;
+    height: 100vh;
+    left: 0px;
+    top: 0px;
     z-index: -1;
         -webkit-animation: slide-right 5s ease-in-out infinite alternate both;
                 animation: slide-right 5s ease-in-out infinite alternate both;
