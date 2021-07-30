@@ -1,0 +1,4 @@
+total_memory: 8071MB	free_memory: 3623MB		usage: 55%
+total_memory: 8071MB	free_memory: 3623MB		usage: 55%
+total_memory: 8071MB	free_memory: 3623MB		usage: 55%
+total_memory: 8071MB	free_memory: 3623MB		usage: 55%
