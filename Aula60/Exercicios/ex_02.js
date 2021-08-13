@@ -1,4 +1,3 @@
-
 // 2) Faça um script que crie as seguintes tabelas no banco de dados:
 
 // clientes(id, nome, email, telefone, numero_documento, tipo_pessoa, pontos)
@@ -10,6 +9,10 @@
 const db = require("../db")
 
 const createTableText = `
+    DROP SCHEMA public CASCADE;
+    CREATE SCHEMA public;
+    GRANT ALL ON SCHEMA public TO postgres;
+    
     CREATE TABLE IF NOT EXISTS clientes
     (
         id UUID PRIMARY KEY DEFAULT gen_random_uuid(),

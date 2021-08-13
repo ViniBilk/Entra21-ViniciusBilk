@@ -1,3 +1,22 @@
+// 3) Crie uma função insereCliente(cliente) que recebe o objeto cliente:
+// {
+//     nome,
+//     email,
+//     telefone,
+//     numero_documento,
+//     tipo_pessoa,
+//     rua,
+//     numero,
+//     cidade,
+//     estado,
+//     cep
+// }
+
+// E insere esse objeto como um registro no banco de dados. 
+// (Deve inserir o registro na tabela clientes e na tabela enderecos).
+
+// Utilize essa função para criar 1 cliente.
+
 const db = require("../db")
 
 let cliente = {
@@ -34,7 +53,6 @@ async function insereCliente(cliente) {
             numero_documento, 
             tipo_pessoa,
             pontos
-           
         ) 
 
         VALUES 
