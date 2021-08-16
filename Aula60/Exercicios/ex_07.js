@@ -5,26 +5,23 @@
 const db = require("../db")
 const format = require("pg-format");
 
-livros = [ 
-
-]
+let livros = ["27eb6004-eaa1-4d9c-b1d8-9ea3880c2adc","c73939de-033a-49a6-8adf-0a51031d4597","e1bcbe9b-9316-4e7e-aff3-67b35fd97877"]
 
 async function obtemLivros(livros){
-let livrosVetor = []
 
-    for(let livro of  livros){
-        livrosVetor.push([
-            livro.nome_autor,
-            livro.assunto,
-            livro.preco,
-            livro.quantidade_estoque,
-            livro.id_editora
-        ])
-    }
+    livros.forEach( async (livro) => {
+        console.log(livro)
+        let query = `SELECT * FROM livros WHERE isbn = $1;`
 
-    let query = format("INSERT INTO livros (nome_autor, assunto, preco, quantidade_estoque, id_editora) VALUES %L RETURNING *", livrosVetor);
-
-    const {rows} = await db.query(query);
+        try {
+            let {rows} = await db.query(query,[livro]);
+            console.log(rows)
+        } catch (err) {
+            console.log(err)
+        }
+        
+    })
+    
 }
 
 (async  () => {

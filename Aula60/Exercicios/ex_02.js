@@ -57,6 +57,8 @@ const createTableText = `
         isbn UUID DEFAULT gen_random_uuid(),
         id_cliente UUID ,
         id_livro UUID ,
+        valor numeric NOT NULL,
+        data numeric NOT NULL,
         PRIMARY KEY (isbn,id_cliente,id_livro),
         FOREIGN KEY (id_cliente) REFERENCES clientes,
         FOREIGN KEY (id_livro) REFERENCES livros
