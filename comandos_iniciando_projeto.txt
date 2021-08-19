@@ -1,0 +1,34 @@
+//Iniciando o Projeto
+npm init -y
+
+//Instalandoos pacotes
+npm i pg pg-hstore sequelize sequelize-cli dotenv bcrypt
+
+//Criação de pastas padrão
+Obs: A partir do arquivo .sequelizerc
+npx sequelize-cli init
+
+//Criando o banco de dados a partir do .env
+npx sequelize-cli db:create
+
+//Criando modelo e migration
+
+npx sequelize-cli model:generate --name Usuario --attributes nome:string,email:string,senha:string
+
+//Criar as migrations
+
+db:migrate
+
+
+//Instalar como dependencia de desenvolvimento
+npm i -D nodemon
+
+
+//Dev code in package json
+npm i -D nodemon
+
+//Run dev code
+npm run dev
+
+//Insomnia
+https://insomnia.rest/download
