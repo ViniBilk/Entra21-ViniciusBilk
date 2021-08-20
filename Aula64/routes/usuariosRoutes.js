@@ -45,7 +45,7 @@ router.put("/:id", async (req, res) => {
 
 router.post("/", async (req, res) => {
 
-
+    //
     //Validar se o usuário ja existe atrav´s do e-mail
 
     try {
