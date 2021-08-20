@@ -1,6 +1,8 @@
 const usuariosServices = require("../services/usuariosServices")
 
-async function getAll(req, res, next){
+//GET usuarios
+
+async function getAll(req, res, next) {
     try {
         const usuarios = await usuariosServices.getUsuarios();
 
@@ -11,7 +13,9 @@ async function getAll(req, res, next){
     }
 }
 
-async function getOne(req, res, next){
+//GET usuario
+
+async function getOne(req, res, next) {
     try {
         const usuarios = await usuariosServices.getUsuario(req.params.id);
 
@@ -22,33 +26,39 @@ async function getOne(req, res, next){
     }
 }
 
-async function create(){
-    try {
-        const usuarios = await usuariosServices.getUsuarios();
+//POST usuario
 
-        res.json(usuarios)
+async function create(req, res, next) {
+    try {
+        const usuario = await usuariosServices.createUsuario(req.body);
+
+        res.json(usuario)
     } catch (error) {
         console.log(error)
         next(error)
     }
 }
 
-async function update(){
-    try {
-        const usuarios = await usuariosServices.getUsuarios();
+//PUT usuarios
 
-        res.json(usuarios)
+async function update(req, res, next) {
+    try {
+        const usuario = await usuariosServices.updateUsuario(req.params.id, req.body);
+
+        res.json(usuario);
     } catch (error) {
         console.log(error)
         next(error)
     }
 }
 
-async function remove(){
-    try {
-        const usuarios = await usuariosServices.getUsuarios();
+//DELETE usuario
 
-        res.json(usuarios)
+async function remove(req, res, next) {
+    try {
+        await usuariosServices.removeUsuario(req.params.id);
+
+        res.status(204).end()
     } catch (error) {
         console.log(error)
         next(error)

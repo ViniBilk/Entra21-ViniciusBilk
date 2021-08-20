@@ -1,11 +1,19 @@
 const express = require("express");
+const helmet = require("helmet");
+const morgan = require("morgan");
+const cors = require("cors");
 const app = express();
 const usuariosRoutes = require("./routes/usuariosRoutes");
 
 const porta = 3000;
 
+
 app.use(express.json());
-app.use("/usuarios", usuariosRoutes)
+app.use(morgan("dev"));
+app.use(helmet());
+app.use(cors());
+
+app.use("/usuarios", usuariosRoutes);
 
 app.get("/", (req, res) => {
     res.send("Hello World!");
@@ -28,7 +36,7 @@ app.delete("/", (req, res) => {
 
 app.use((error, req, res, next) => {
     res.status(error.status);
-    res.json({message: error.message});
+    res.json({ message: error.message });
 });
 
 app.listen(porta, () => {

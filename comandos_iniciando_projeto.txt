@@ -36,3 +36,7 @@ https://insomnia.rest/download
 //Tratamento de erros https
 
 npm i http-error
+
+//Validator
+
+npm i express-validator
