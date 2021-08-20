@@ -23,6 +23,14 @@ app.delete("/", (req, res) => {
     res.send("delete endpoint");
 });
 
+//Middleware de tratamento de erro     |
+//Obs: Colocar logo aima do app.listen V
+
+app.use((error, req, res, next) => {
+    res.status(error.status);
+    res.json({message: error.message});
+});
+
 app.listen(porta, () => {
     console.log(`Servidor está rodando em http://localhost:${porta}`);
 });

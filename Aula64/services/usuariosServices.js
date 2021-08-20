@@ -1,42 +1,43 @@
 const { Usuario } = require("../db/models")
+const createError = require("http-errors")
 
-async function getUsuarios(id){
+async function getUsuarios(){
+    const usuarios = await Usuario.findAll();
+
+    return usuarios;
+};
+
+async function getUsuario(id){
     const usuario = await Usuario.findOne({
         where: {
-            id: req.params.id
+            id
         }
     });
 
     if (!usuario) {
-        return res.status(404).json({ message: "Usuário não foi encontrado!" });
+        throw new createError(404, "Usuário não encontrado");
     };
 
-    res.json(usuario);
+   return usuario;
 };
 
-async function getUsuario(id){
-    const usuarios = await Usuario.findAll();
+// async function createUsuario(usuario){
 
-    res.json(usuarios);
-};
+// };
 
-async function createUsuario(usuario){
+// async function removeUsuario(id){
 
-};
+// };
 
-async function removeUsuario(id){
+// async function updateUsuario(usuarioAtualizado){
 
-};
-
-async function updateUsuario(usuarioAtualizado){
-
-};
+// };
 
 module.exports = {
     getUsuario,
     getUsuarios,
-    createUsuario,
-    removeUsuario,
-    updateUsuario	
+    // createUsuario,
+    // removeUsuario,
+    // updateUsuario	
 }
 

@@ -1,6 +1,17 @@
 const express = require("express")
 const router = express.Router();
 
+//Importando Controllers
+const usuariosControllers = require("../controllers/usuariosControllers")
+
+//GET usuario
+
+router.get("/:id", usuariosControllers.getOne);
+
+//GET usuarios
+
+router.get("/", usuariosControllers.getAll);
+
 //PUT usuario
 
 router.put("/:id", async (req, res) => {
@@ -29,29 +40,6 @@ router.put("/:id", async (req, res) => {
     }
 });
 
-//GET usuario
-
-router.get("/:id", async (req, res) => {
-
-    try {
-       
-    } catch (error) {
-        console.log(error)
-        res.status(400).json({ message: "Ocorreu um Erro" });
-    }
-});
-
-//GET usuarios
-
-router.get("/", async (req, res) => {
-
-    try {
-       
-    } catch (error) {
-        console.log(error)
-        res.status(400).json({ message: "Ocorreu um Erro" });
-    }
-});
 
 //POST usuarios
 
