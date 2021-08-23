@@ -5,13 +5,15 @@ const {
 const bcrypt = require("bcrypt");
 module.exports = (sequelize, DataTypes) => {
   class User extends Model {
-    static associate(models) { }
+    static associate(models) {
+      this.hasOne(models.RefreshToken, { foreignKey: "user_id", as: "refreshToken" })
+    }
 
     verifyPassword(password) {
       return bcrypt.compareSync(password, this.password);
     }
 
-    toJSON(){
+    toJSON() {
       return {
         ...this.get(),
         password: undefined

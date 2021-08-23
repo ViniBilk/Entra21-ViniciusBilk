@@ -4,7 +4,7 @@ const jwt = require("jsonwebtoken");
 const app = express();
 const PORT = process.env.PORT || 3000;
 
-const { User } = require("./models");
+const { User, RefreshToken } = require("./models");
 
 app.use(express.json());
 
@@ -50,10 +50,67 @@ app.post("/login", async (req, res) => {
             expiresIn: "20s"
         });
 
-        res.json({ token });
+        const expiresIn = Date.now() + 1000 * 60;
+
+        // Emitindo o refresh-token
+        const refreshToken = jwt.sign({ sub: user.id }, process.env.REFRESH_TOKEN_SECRET, {
+            expiresIn
+        });
+
+        const [dbRefreshToken, created] = await RefreshToken.findOrCreate({
+            where: {
+                user_id: user.id
+            },
+            defaults: {
+                token: refreshToken,
+                expiresIn
+            }
+        });
+
+        if (!created) {
+            dbRefreshToken.token = refreshToken;
+            dbRefreshToken.expiresIn = expiresIn;
+
+            await dbRefreshToken.save();
+        }
+
+        res.json({ token, refreshToken });
     } catch (err) {
         console.log(err);
         res.status(500).json({ message: "Oops! Something bag happened!" });
+    }
+});
+
+app.post("/refresh", async (req, res) => {
+    try {
+        const token = req.body.refreshToken || "";
+        const refreshToken = await RefreshToken.findOne({
+            where: {
+                token
+            },
+            include: "user"
+        });
+        // Validar o refreshToken
+        if (!refreshToken) {
+            res.status(401).json({ message: "Refresh Token invalid!" });
+        }
+
+        // Emitir um novo access-token
+        const accessToken = jwt.sign({ sub: refreshToken.user.id }, process.env.TOKEN_SECRET, {
+            expiresIn: "20s"
+        });
+        const expiresIn = Date.now() + 1000 * 60;
+        // Emitir um novo refresh-token
+        const newRefreshToken = jwt.sign({ sub: refreshToken.user.id }, process.env.TOKEN_SECRET, {
+            expiresIn
+        });
+        refreshToken.token = newRefreshToken;
+        refreshToken.expiresIn = expiresIn;
+        refreshToken.save();
+        res.send({ accessToken, newRefreshToken });
+    } catch (err) {
+        console.log(err);
+        res.status(500).send({ message: "Oops! Something bag happened!" });
     }
 });
 
