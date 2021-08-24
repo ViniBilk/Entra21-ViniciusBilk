@@ -16,7 +16,8 @@ module.exports = (sequelize, DataTypes) => {
     toJSON() {
       return {
         ...this.get(),
-        password: undefined
+        password: undefined,
+        role: undefined
       }
     }
   };
@@ -40,6 +41,13 @@ module.exports = (sequelize, DataTypes) => {
       allowNull: false,
       set(password) {
         this.setDataValue("password", bcrypt.hashSync(password, 10));
+      }
+    },
+    role: {
+      type	: DataTypes.STRING,
+      allowNull: false,
+      validate: {
+        isIn : [["admin", "user"]]
       }
     }
   }, {

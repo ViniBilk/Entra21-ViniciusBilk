@@ -1,4 +1,7 @@
 'use strict';
+
+const { DataTypes } = require("sequelize");
+
 module.exports = {
   up: async (queryInterface, Sequelize) => {
     await queryInterface.createTable('users', {
@@ -19,6 +22,10 @@ module.exports = {
       },
       password: {
         type: Sequelize.STRING,
+        allowNull: false
+      },
+      role :{
+        type: DataTypes.ENUM("admin", "user"),
         allowNull: false
       },
       created_at: {

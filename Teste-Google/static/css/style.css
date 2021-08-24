@@ -1,0 +1,32 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url("../img/bg.jpg");
+  background-size: cover;
+  overflow: hidden;
+}
+
+.darkness {
+  background-color: black;
+  opacity: 50%;
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.mainBg {
+  position: absolute;
+}
+
+.googleButton {
+  margin: 0;
+  z-index: 1000;
+}
+
+.g-signin2 {
+  z-index: 1000;
+}
+/*# sourceMappingURL=style.css.map */
