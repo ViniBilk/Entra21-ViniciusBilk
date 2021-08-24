@@ -8,26 +8,57 @@
         content="854714059959-12tp2be184e4sfp3de40p28p9hndubm5.apps.googleusercontent.com">
     <title>Clona Cartão</title>
     <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;600&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
-
     <div class="mainBg">
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
-        <a href="#" onclick="signOut();">Sign out</a>
+        <h1 class="title">Nós não vamos roubar seu cartão.</h1>
+        <p class="subtitle">Pode confiar man.</p>
+        <div class="logIns">
+            <div class="inputsLogIn">
+                <input type="text" class="email" placeholder="Email">
+                <input type="text" class="password" placeholder="Password">
+            </div>
+            <div class="inputsLogIn2">
+                <!-- <div class="g-signin2" id="loucura" data-onsuccess="onSignIn"></div> -->
+                <div id="my-signin2"></div>
+                <!-- <a href="#" onclick="signOut();">Sign out</a> -->
+            </div>
+        </div>
     </div>
+
+
+
+
+
+
+
 
 
 
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script>
-        function onSignIn(googleUser) {
-            var profile = googleUser.getBasicProfile();
-            console.log('ID: ' + profile.getId()); // Do not send to your backend! Use an ID token instead.
-            console.log('Name: ' + profile.getName());
-            console.log('Image URL: ' + profile.getImageUrl());
-            console.log('Email: ' + profile.getEmail()); // This is null if the 'email' scope is not present.
+        async function onSignIn(googleUser) {            
+            try {
+                var id_token = googleUser.getAuthResponse().id_token;
+                
+                const body = JSON.stringify({ token: id_token });
+
+                const res = await fetch("http://localhost:3000", {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body
+                });                
+
+            } catch (error) {
+                console.log(error)
+            }
         }
 
         function signOut() {
@@ -37,6 +68,28 @@
             });
         }
     </script>
+
+<script>
+  function onSuccess(googleUser) {
+    console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+  }
+  function onFailure(error) {
+    console.log(error);
+  }
+  function renderButton() {
+    gapi.signin2.render('my-signin2', {
+      'scope': 'profile email',
+      'width': 240,
+      'height': 50,
+      'longtitle': true,
+      'theme': 'dark',
+      'onsuccess': onSuccess,
+      'onfailure': onFailure
+    });
+  }
+</script>
+
+<script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
 </body>
 
 </html>

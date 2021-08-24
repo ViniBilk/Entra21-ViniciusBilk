@@ -1,24 +1,64 @@
 html {
   margin: 0;
   padding: 0;
-}
-
-body {
-  background-image: url("../img/bg.jpg");
-  background-size: cover;
   overflow: hidden;
 }
 
-.darkness {
-  background-color: black;
-  opacity: 50%;
-  width: 100vw;
+body {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(.jpg), #FFFFFF;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(.jpg), #FFFFFF;
+  background-image: url(../img/bg.png);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100vh;
-  position: absolute;
+}
+
+.title {
+  width: 474px;
+  height: 249px;
+  font-family: 'Open Sans', sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 54px;
+  line-height: 87px;
+  color: #FFFFFF;
+  margin-left: 60px;
+  margin-top: 60px;
+}
+
+.subtitle {
+  width: 304px;
+  height: 58px;
+  left: 680px;
+  top: 490px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 30px;
+  line-height: 49px;
+  margin-left: 60px;
+  margin-top: 50px;
+  color: #FFFFFF;
 }
 
 .mainBg {
-  position: absolute;
+  width: 760px;
+  height: 803px;
+  background: #051F2B;
+  border-radius: 43px;
 }
 
 .googleButton {
@@ -28,5 +68,55 @@ body {
 
 .g-signin2 {
   z-index: 1000;
+  width: 200px;
+  height: 50px;
+}
+
+input {
+  background: #051F2B;
+  border: none;
+  border-bottom: solid 2px gray;
+  width: 300px;
+  height: 40px;
+  font-size: 15px;
+  color: #FFFFFF;
+  margin-top: 30px;
+}
+
+.inputsLogIn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin-left: 60px;
+}
+
+.logIns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.inputsLogIn2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-left: 60px;
+}
+
+#loucura {
+  width: 200px;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
 }
 /*# sourceMappingURL=style.css.map */
