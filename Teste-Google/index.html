@@ -73,7 +73,7 @@
     <script>
         async function onSignIn(googleUser) {            
             try {
-                var id_token = googleUser.getAuthResponse().id_token;
+                var id_token = googleUser.getAuthResponse().id_token;                
                 
                 const body = JSON.stringify({ token: id_token });
 
@@ -83,8 +83,8 @@
                         'Content-Type': 'application/json'
                     },
                     body
-                });                
-
+                });
+            
             } catch (error) {
                 console.log(error)
             }
@@ -100,7 +100,9 @@
 
 <script>
   function onSuccess(googleUser) {
+    console.log(googleUser.getBasicProfile())
     console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    location.href = "./informacoes.html";
   }
   function onFailure(error) {
     console.log(error);
