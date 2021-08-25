@@ -11,6 +11,8 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 
 <body>
@@ -26,11 +28,13 @@
                 <!-- <a href="#" onclick="signOut();">Sign out</a> -->
             </div>
             <div class="inputsLogIn">
-                <input type="text" class="email" placeholder="Email">
-                <input type="text" class="password" placeholder="Password">
+                <input type="text" class="emailMain" placeholder="Email">
+                <input type="password" class="passwordMain" placeholder="Password">
 
-                <a href="#" class="loginButton1">Log In</a>
-                <a href="#" class="cadastroModalOpen">Sign Up</a>   
+                <div class="buttons">
+                    <a href="#" class="loginButton1">Log In</a>
+                    <a href="#" class="cadastroModalOpen">Sign Up</a>   
+                </div>
                 
             </div>
        
@@ -55,7 +59,8 @@
         <div class="bgBall2"></div>
     </div>
 
-
+    
+ 
 
 
 
@@ -107,6 +112,7 @@
       'height': 50,
       'longtitle': true,
       'theme': 'dark',
+      'background-color': '#50C4F2',
       'onsuccess': onSuccess,
       'onfailure': onFailure
     });
@@ -114,6 +120,7 @@
 </script>
 
 <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+
 </body>
 
 </html>

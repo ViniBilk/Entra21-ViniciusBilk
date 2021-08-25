@@ -9,3 +9,8 @@ botaoCadastro.addEventListener('click', (event) => {
 closeButton.addEventListener('click', (event) => {
     modalCadastro.style.display = "none";
 });
+
+function myFunction() {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  }
