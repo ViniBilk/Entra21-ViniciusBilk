@@ -4,31 +4,13 @@ const client = new OAuth2Client("854714059959-12tp2be184e4sfp3de40p28p9hndubm5.a
 const express = require("express");
 const cors = require("cors");
 const jwt = require("jsonwebtoken");
-const { User, RefreshToken } = require("./models");
+const { User, RefreshToken } = require("./src/models");
 const app = express();
 
-const porta = 3000;
+const PORT = 3000;
 
 app.use(express.json());
 app.use(cors());
-
-app.post("/", async (req, res) => {
-    try {
-
-        const { token } = req.body;
-
-        const ticket = await client.verifyIdToken({
-            idToken: token,
-            audience: "854714059959-12tp2be184e4sfp3de40p28p9hndubm5.apps.googleusercontent.com"
-        });
-        const payload = ticket.getPayload();
-        const userid = payload['sub'];
-
-    } catch (error) {
-        console.log(error)
-    }
-});
-
 
 function authMiddleware(req, res, next) {
     const authToken = req.headers.authorization?.replace("Bearer ", "");
@@ -49,6 +31,22 @@ function authMiddleware(req, res, next) {
     }
 };
 
+app.post("/", async (req, res) => {
+    try {
+
+        const { token } = req.body;
+
+        const ticket = await client.verifyIdToken({
+            idToken: token,
+            audience: "854714059959-12tp2be184e4sfp3de40p28p9hndubm5.apps.googleusercontent.com"
+        });
+        const payload = ticket.getPayload();
+        const userid = payload['sub'];
+
+    } catch (error) {
+        console.log(error)
+    }
+});
 
 app.post("/login", async (req, res) => {
     try {
@@ -133,8 +131,7 @@ app.post("/refresh", async (req, res) => {
     }
 });
 
-
-app.post("/users", async (req, res) => {
+app.post("/singup", async (req, res) => {
     try {
         const { name, email, password } = req.body;
 
@@ -144,7 +141,8 @@ app.post("/users", async (req, res) => {
             },
             defaults: {
                 name,
-                password
+                password,
+                role: "user"
             }
         })
 
@@ -158,6 +156,8 @@ app.post("/users", async (req, res) => {
         res.status(400).json({ message: "Failed!" });
     }
 });
+
+app.listen(PORT, () => console.log("Servidor rodando na porta: " + PORT));
 
 
 

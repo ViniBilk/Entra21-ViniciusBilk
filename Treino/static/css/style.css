@@ -1,0 +1,155 @@
+html {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+body {
+  background: #040018;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.title {
+  width: 564px;
+  height: 102px;
+  left: 343px;
+  top: 194px;
+  font-family: 'Montserrat', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 75px;
+  line-height: 104px;
+  color: #1D92FF;
+  margin: 0;
+}
+
+.subtitle {
+  width: 372px;
+  height: 89px;
+  left: 354px;
+  top: 319px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 37px;
+  margin-bottom: 0px;
+  color: #FFFFFF;
+  margin-bottom: 10px;
+}
+
+.mainBg {
+  border-radius: 43px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.googleButton {
+  margin: 0;
+  z-index: 1000;
+}
+
+.g-signin2 {
+  z-index: 1000;
+  width: 200px;
+  height: 50px;
+}
+
+input {
+  background: #040018;
+  border: none;
+  border-bottom: solid 2px gray;
+  width: 240px;
+  height: 40px;
+  font-size: 15px;
+  color: #FFFFFF;
+  margin-top: 30px;
+}
+
+.inputsLogIn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.logIns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.inputsLogIn2 {
+  margin-top: 10px;
+}
+
+#loucura {
+  width: 200px;
+  -webkit-transform: scale(1.4);
+          transform: scale(1.4);
+}
+
+.loginButton1 {
+  font-family: Montserrat;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #1D92FF;
+  padding: 13px 30px 13px 30px;
+  width: 100px;
+  text-align: center;
+  margin-top: 30px;
+  border-radius: 3px;
+}
+
+.cardImg {
+  width: 567.17px;
+  height: 517.31px;
+}
+
+.bgBall1 {
+  position: absolute;
+  width: 625px;
+  height: 625px;
+  left: 1498px;
+  top: -201px;
+  background: #1D92FF;
+  -webkit-filter: blur(1400px);
+          filter: blur(1400px);
+}
+
+.bgBall2 {
+  position: absolute;
+  width: 625px;
+  height: 625px;
+  left: -202px;
+  top: 724px;
+  background: #1D92FF;
+  -webkit-filter: blur(1400px);
+          filter: blur(1400px);
+}
+/*# sourceMappingURL=style.css.map */

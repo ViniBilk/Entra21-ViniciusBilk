@@ -1,31 +1,28 @@
 'use strict';
 module.exports = {
   up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('refresh_tokens', {
+    await queryInterface.createTable('refreshTokens', {
       id: {
         allowNull: false,
         primaryKey: true,
-        type: Sequelize.UUID,
-        defaultValue: Sequelize.UUIDV4
+        type: Sequelize.UUID
       },
       token: {
-        type: Sequelize.STRING,
-        allowNull: false,
-        unique: true
+        type: Sequelize.STRING
       },
       expires_in: {
-        type: Sequelize.BIGINT,
-        allowNull: false
+        type: Sequelize.BIGINT
       },
       user_id: {
         type: Sequelize.UUID,
         allowNull: false,
+        unique: true,
         references: {
           model: "users",
           key: "id"
         },
+        onUpdate: "CASCADE",
         onDelete: "CASCADE",
-        onUpdate: "CASCADE"
       },
       created_at: {
         allowNull: false,
@@ -38,6 +35,6 @@ module.exports = {
     });
   },
   down: async (queryInterface, Sequelize) => {
-    await queryInterface.dropTable('refresh_tokens');
+    await queryInterface.dropTable('refreshTokens');
   }
 };

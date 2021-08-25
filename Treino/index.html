@@ -21,15 +21,13 @@
             <p class="subtitle">A melhor plataforma de clonagem de cartão!</p>
             <div class="logIns">
                 <div class="inputsLogIn2">
-                    <!-- <div class="g-signin2" id="loucura" data-onsuccess="onSignIn"></div> -->
                     <div id="my-signin2"></div>
-                    <!-- <a href="#" onclick="signOut();">Sign out</a> -->
                 </div>
                 <div class="inputsLogIn">
-                    <input type="text" class="email" placeholder="Email">
-                    <input type="text" class="password" placeholder="Password">
+                    <input type="text" class="email" id="email" placeholder="Email">
+                    <input type="text" id="password" class="password" placeholder="Password">
 
-                    <a href="#" class="loginButton1">Log In</a>
+                    <a href="#" id="login" class="loginButton1">Log In</a>
 
                 </div>
 
@@ -45,69 +43,22 @@
         <div class="bgBall2"></div>
     </div>
 
-
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script>
-        async function onSignIn(googleUser) {
-            try {
-                var id_token = googleUser.getAuthResponse().id_token;
-
-                const body = JSON.stringify({ token: id_token });
-
-                const res = await fetch("http://localhost:3000", {
-                    method: "POST",
-                    headers: {
-                        'Content-Type': 'application/json'
-                    },
-                    body
-                });
-
-            } catch (error) {
-                console.log(error)
-            }
-        }
-
-        function signOut() {
-            var auth2 = gapi.auth2.getAuthInstance();
-            auth2.signOut().then(function () {
-                console.log('User signed out.');
-            });
-        }
-    </script>
-
-    <script>
-        function onSuccess(googleUser) {
-            console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
-        }
-        function onFailure(error) {
-            console.log(error);
-        }
-        function renderButton() {
-            gapi.signin2.render('my-signin2', {
-                'scope': 'profile email',
-                'width': 240,
-                'height': 50,
-                'longtitle': true,
-                'theme': 'dark',
-                'onsuccess': onSuccess,
-                'onfailure': onFailure
-            });
-        }
-    </script>
-
+    <script src="static/js/onSignIn.js"></script>
+    <script src="static/js/signOut.js"></script>
+    <script src="static/js/onSucess.js"></script>
     <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
-
     <script>
-        let login = document.querySelector("loginButton1"),
-            email = document.querySelector("email"),
-            password = document.querySelector("password")
+        let login = document.getElementById("login"),
+            email = document.getElementById("email"),
+            password = document.getElementById("password")
 
         login.addEventListener("click", (event) => {
             (async () => {
                 try {
                     const body = JSON.stringify({ email: email.value, password: password.value });
 
-                    const res = await fetch("http://localhost:3000/login", {
+                    const res = await fetch("http://localhost:3000/auth/login", {
                         method: "POST",
                         headers: {
                             'Content-Type': 'application/json'
@@ -115,6 +66,7 @@
                         body
                     });
 
+                    console.log(tokens)
                 } catch (error) {
                     console.log(error)
                 }
