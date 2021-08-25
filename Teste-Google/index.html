@@ -30,6 +30,7 @@
                 <input type="text" class="password" placeholder="Password">
 
                 <a href="#" class="loginButton1">Log In</a>
+                <a href="#" class="cadastroModalOpen">Sign Up</a>   
                 
             </div>
        
@@ -38,6 +39,15 @@
         <div class="img">
             <img src="static/img/card.png" alt="cartao" class="cardImg">
         </div>
+    </div>
+
+    <div class="bgModal">
+        <a href="#" class="closeButton">X</a>
+        <h2 class="modalTitle">Create Acount:</h2>
+        <input type="text" class="nameModal" placeholder="Name">
+        <input type="text" class="emailModal" placeholder="Email">
+        <input type="text" class="passwordModal" placeholder="Password">
+        <a href="#" class="cadastroButton">Sing Up</a>
     </div>
 
     <div class="bgBalls">
@@ -53,7 +63,7 @@
 
 
 
-
+    <script src="static/js/modals.js" async defer></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script>
         async function onSignIn(googleUser) {            

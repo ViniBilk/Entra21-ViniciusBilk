@@ -25,12 +25,14 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 800;
-    font-size: 75px;
+    font-size: 65px;
     line-height: 104px;
 
     color: #1D92FF;
 
     margin: 0;
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+	        animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
 }
 
 .subtitle {
@@ -48,6 +50,8 @@ body {
     
     color: #FFFFFF;
     margin-bottom: 10px;
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+        animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
     
 }
 
@@ -58,17 +62,20 @@ body {
 
 .googleButton {
     margin: 0;
-    z-index: 1000;
+    z-index: 1000; 
+   
 }
 
 .g-signin2 {
     z-index: 1000;
     width: 200px;
     height: 50px;
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+    animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
 }
 
 input {
-    background: #040018;
+    background: #04001800;
     border: none;
     border-bottom: solid 2px gray;
     width: 240px;
@@ -76,6 +83,8 @@ input {
     font-size: 15px;
     color: #FFFFFF;
     margin-top: 30px;
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+    animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
 }
 
 .inputsLogIn {
@@ -90,7 +99,24 @@ input {
 }
 .inputsLogIn2 {
     margin-top: 10px;
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+    animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
 }
+
+.cadastroButton {
+    color: white;
+    background-color: black;
+    padding: 10px 30px 10px 30px;
+    text-decoration: none;
+    font-family: Montserrat;
+    width: 70px;
+    border-radius: 90px;
+    margin-top: 40px;
+    text-align: center;
+
+}
+
+
 
 #loucura {
     width: 200px;
@@ -98,28 +124,47 @@ input {
 }
 
 .loginButton1{
-    font-family: Montserrat;
+
     text-decoration: none;
     color: #ffffff;
     background-color: #1D92FF;
     padding: 13px 30px 13px 30px;
-    width: 100px;
+    width: 60px;
     text-align: center;
     margin-top: 30px;
     border-radius: 3px;
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+    animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
 }
+
+.cadastroModalOpen {
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 13px 30px 13px 30px;
+    width: 60px;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 3px;
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+    animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+}
+
+
 
 .cardImg {
     width: 567.17px;
     height: 517.31px;
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+    animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
 }
 
 .bgBall1 {
     position: absolute;
     width: 625px;
     height: 625px;
-    left: 1498px;
-    top: -201px;
+    left: 1798px;
+    top: -501px;
 
     background: #1D92FF;
     filter: blur(1400px);
@@ -135,3 +180,55 @@ input {
     background: #1D92FF;
     filter: blur(1400px);
 }
+
+.bgModal {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #57b9ff;
+    padding: 60px;
+    border-radius: 5px;
+}
+
+.modalTitle {
+    color: white;
+    font-family: Montserrat;
+    font-size: 20px;
+    margin: 0;
+}
+
+.closeButton {
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    font-family: Montserrat;
+    font-weight: 800;
+    left: 300px;
+}
+
+  @-webkit-keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 100;
+    }
+  }
+  
