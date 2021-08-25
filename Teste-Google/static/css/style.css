@@ -5,12 +5,10 @@ html {
 }
 
 body {
-  position: relative;
-  width: 1920px;
-  height: 1080px;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.3)), to(rgba(0, 0, 0, 0.3))), url(.jpg), #FFFFFF;
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(.jpg), #FFFFFF;
-  background-image: url(../img/bg.png);
+  background: #040018;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -24,41 +22,44 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
+  -ms-flex-line-pack: center;
+      align-content: center;
 }
 
 .title {
-  width: 474px;
-  height: 249px;
-  font-family: 'Open Sans', sans-serif;
+  width: 564px;
+  height: 102px;
+  left: 343px;
+  top: 194px;
+  font-family: 'Montserrat', sans-serif;
   font-style: normal;
-  font-weight: 600;
-  font-size: 54px;
-  line-height: 87px;
-  color: #FFFFFF;
-  margin-left: 60px;
-  margin-top: 60px;
+  font-weight: 800;
+  font-size: 75px;
+  line-height: 104px;
+  color: #1D92FF;
+  margin: 0;
 }
 
 .subtitle {
-  width: 304px;
-  height: 58px;
-  left: 680px;
-  top: 490px;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  font-size: 30px;
-  line-height: 49px;
-  margin-left: 60px;
-  margin-top: 50px;
+  width: 372px;
+  height: 89px;
+  left: 354px;
+  top: 319px;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 37px;
+  margin-bottom: 0px;
   color: #FFFFFF;
+  margin-bottom: 10px;
 }
 
 .mainBg {
-  width: 760px;
-  height: 803px;
-  background: #051F2B;
   border-radius: 43px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .googleButton {
@@ -73,10 +74,10 @@ body {
 }
 
 input {
-  background: #051F2B;
+  background: #040018;
   border: none;
   border-bottom: solid 2px gray;
-  width: 300px;
+  width: 240px;
   height: 40px;
   font-size: 15px;
   color: #FFFFFF;
@@ -91,16 +92,9 @@ input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  margin-left: 60px;
 }
 
 .logIns {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.inputsLogIn2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -108,15 +102,54 @@ input {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-left: 60px;
+}
+
+.inputsLogIn2 {
+  margin-top: 10px;
 }
 
 #loucura {
   width: 200px;
   -webkit-transform: scale(1.4);
           transform: scale(1.4);
+}
+
+.loginButton1 {
+  font-family: Montserrat;
+  text-decoration: none;
+  color: #ffffff;
+  background-color: #1D92FF;
+  padding: 13px 30px 13px 30px;
+  width: 100px;
+  text-align: center;
+  margin-top: 30px;
+  border-radius: 3px;
+}
+
+.cardImg {
+  width: 567.17px;
+  height: 517.31px;
+}
+
+.bgBall1 {
+  position: absolute;
+  width: 625px;
+  height: 625px;
+  left: 1498px;
+  top: -201px;
+  background: #1D92FF;
+  -webkit-filter: blur(1400px);
+          filter: blur(1400px);
+}
+
+.bgBall2 {
+  position: absolute;
+  width: 625px;
+  height: 625px;
+  left: -202px;
+  top: 724px;
+  background: #1D92FF;
+  -webkit-filter: blur(1400px);
+          filter: blur(1400px);
 }
 /*# sourceMappingURL=style.css.map */
