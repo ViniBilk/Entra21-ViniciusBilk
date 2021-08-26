@@ -5,7 +5,7 @@ html {
 }
 
 body {
-    background: #040018;
+    background: #0a0025;
     width: 100vw;
     height: 100vh;
     margin: 0;
@@ -16,6 +16,8 @@ body {
     align-content: center;
 }
 
+
+
 .title {
     width: 564px;
     height: 102px;
@@ -25,12 +27,14 @@ body {
     font-family: 'Montserrat', sans-serif;
     font-style: normal;
     font-weight: 800;
-    font-size: 75px;
+    font-size: 65px;
     line-height: 104px;
 
-    color: #1D92FF;
+    color: #50C4F2;
 
     margin: 0;
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+	        animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
 }
 
 .subtitle {
@@ -39,6 +43,7 @@ body {
     left: 354px;
     top: 319px;
     
+    color: white;
     font-family: Montserrat;
     font-style: normal;
     font-weight: normal;
@@ -46,8 +51,10 @@ body {
     line-height: 37px;
     margin-bottom: 0px;
     
-    color: #FFFFFF;
+
     margin-bottom: 10px;
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+        animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
     
 }
 
@@ -58,17 +65,20 @@ body {
 
 .googleButton {
     margin: 0;
-    z-index: 1000;
+    z-index: 1000; 
+   
 }
 
 .g-signin2 {
     z-index: 1000;
     width: 200px;
     height: 50px;
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+    animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
 }
 
-input {
-    background: #040018;
+.emailMain {
+    background: #04001800;
     border: none;
     border-bottom: solid 2px gray;
     width: 240px;
@@ -76,6 +86,64 @@ input {
     font-size: 15px;
     color: #FFFFFF;
     margin-top: 30px;
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+    animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+}
+
+.passwordMain {
+    background: #04001800;
+    border: none;
+    border-bottom: solid 2px gray;
+    width: 240px;
+    height: 40px;
+    font-size: 15px;
+    color: #FFFFFF;
+    margin-top: 30px;
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+    animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+}
+
+.nameModal {
+    background: #04001800;
+    border: none;
+    border-bottom: solid 2px rgb(255, 255, 255);
+    width: 240px;
+    height: 40px;
+    font-size: 15px;
+    color: #FFFFFF;
+    margin-top: 30px;
+    &::placeholder {
+        color: white;
+    }
+}
+
+.emailModal {
+    background: #04001800;
+    border: none;
+    border-bottom: solid 2px rgb(255, 255, 255);
+    width: 240px;
+    height: 40px;
+    font-size: 15px;
+    color: #FFFFFF;
+    margin-top: 30px;
+    &::placeholder {
+        color: white;
+    }
+}
+
+.passwordModal{
+    background: #04001800;
+    border: none;
+    border-bottom: solid 2px rgb(255, 255, 255);
+    width: 240px;
+    height: 40px;
+    font-size: 15px;
+    color: #FFFFFF;
+    margin-top: 30px;
+
+    &::placeholder {
+        color: white;
+    }
 }
 
 .inputsLogIn {
@@ -89,8 +157,26 @@ input {
 
 }
 .inputsLogIn2 {
-    margin-top: 10px;
+    margin-top: 50px;
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+    animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
 }
+
+.cadastroButton {
+    color: rgb(255, 255, 255);
+    background-color: #50C4F2;
+    padding: 10px 30px 10px 30px;
+    text-decoration: none;
+    font-family: Montserrat;
+    width: 70px;
+    border-radius: 5px;
+    margin-top: 40px;
+    font-size: 12px;
+    text-align: center;
+
+}
+
+
 
 #loucura {
     width: 200px;
@@ -98,30 +184,56 @@ input {
 }
 
 .loginButton1{
-    font-family: Montserrat;
+
     text-decoration: none;
     color: #ffffff;
-    background-color: #1D92FF;
+    background-color: #50C4F2;
     padding: 13px 30px 13px 30px;
-    width: 100px;
+    width: 60px;
     text-align: center;
     margin-top: 30px;
     border-radius: 3px;
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+    animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+    font-family: Montserrat;
+    font-size: 12px;
+}
+
+.cadastroModalOpen {
+    text-decoration: none;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 13px 30px 13px 30px;
+    width: 60px;
+    text-align: center;
+    margin-top: 30px;
+    border-radius: 3px;
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+    animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+    font-family: Montserrat;
+    font-size: 12px;
+    margin-left: 10px;
+}
+
+.buttons {
+    display: flex;
 }
 
 .cardImg {
     width: 567.17px;
     height: 517.31px;
+    -webkit-animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
+    animation: slide-in-top 0.5s cubic-bezier(.17,.67,.83,.67) both;
 }
 
 .bgBall1 {
     position: absolute;
     width: 625px;
     height: 625px;
-    left: 1498px;
-    top: -201px;
+    left: 1798px;
+    top: -501px;
 
-    background: #1D92FF;
+    background: #50C4F2;
     filter: blur(1400px);
 }
 
@@ -132,6 +244,73 @@ input {
     left: -202px;
     top: 724px;
 
-    background: #1D92FF;
+    background: #50C4F2;
     filter: blur(1400px);
 }
+
+.bgModal {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background-color: #1a142b;
+    padding: 60px;
+    border-radius: 5px;
+    transition-duration: 2s;
+
+}
+
+.modalTitle {
+    color:#50C4F2;
+    font-family: Montserrat;
+    font-size: 20px;
+    margin: 0;
+}
+
+.closeButton {
+    position: absolute;
+    text-decoration: none;
+    color: white;
+    font-family: Montserrat;
+    font-weight: 800;
+    left: 300px;
+}
+
+#lampIcon {
+    color: #50C4F2;
+    font-size: 30px;
+}
+
+.lampTop {
+    width: 30px;
+    position: absolute;
+    top: 60px;
+    right: 400px;
+    padding: 10px;
+    border-radius: 100px;
+}
+  @-webkit-keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes slide-in-top {
+    0% {
+      -webkit-transform: translateY(-100px);
+              transform: translateY(-100px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 100;
+    }
+  }
+  

@@ -11,28 +11,30 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 </head>
 
 <body>
 
     <div class="mainBg">
         <div class="text">
-            <h1 class="title">CARDMY</h1>
-            <p class="subtitle">A melhor plataforma de clonagem de cartão!</p>
-            <div class="logIns">
-                <div class="inputsLogIn2">
-                    <!-- <div class="g-signin2" id="loucura" data-onsuccess="onSignIn"></div> -->
-                    <div id="my-signin2"></div>
-                    <!-- <a href="#" onclick="signOut();">Sign out</a> -->
-                </div>
-                <div class="inputsLogIn">
-                    <input type="text" class="email" placeholder="Email">
-                    <input type="text" class="password" placeholder="Password">
+        <h1 class="title">CARDMY</h1>
+        <p class="subtitle">A melhor plataforma de clonagem de cartão!</p>
+        <div class="logIns">
+            <div class="inputsLogIn2">
+                <!-- <div class="g-signin2" id="loucura" data-onsuccess="onSignIn"></div> -->
+                <div id="my-signin2"></div>
+                <!-- <a href="#" onclick="signOut();">Sign out</a> -->
+            </div>
+            <div class="inputsLogIn">
+                <input type="text" class="emailMain" placeholder="Email">
+                <input type="password" class="passwordMain" placeholder="Password">
 
+                <div class="buttons">
                     <a href="#" class="loginButton1">Log In</a>
-
-                </div>
-
+                    <a href="#" class="cadastroModalOpen">Sign Up</a>   
+                </div>             
             </div>
         </div>
         <div class="img">
@@ -40,18 +42,27 @@
         </div>
     </div>
 
+    <div class="bgModal">
+        <a href="#" class="closeButton">X</a>
+        <h2 class="modalTitle">Create Acount:</h2>
+        <input type="text" class="nameModal" placeholder="Name">
+        <input type="text" class="emailModal" placeholder="Email">
+        <input type="text" class="passwordModal" placeholder="Password">
+        <a href="#" class="cadastroButton">Sing Up</a>
+    </div>
+
     <div class="bgBalls">
         <div class="bgBall1"></div>
         <div class="bgBall2"></div>
     </div>
 
-
+    <script src="static/js/modals.js" async defer></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script>
         async function onSignIn(googleUser) {
             try {
-                var id_token = googleUser.getAuthResponse().id_token;
-
+                var id_token = googleUser.getAuthResponse().id_token;                
+                
                 const body = JSON.stringify({ token: id_token });
 
                 const res = await fetch("http://localhost:3000", {
@@ -61,7 +72,6 @@
                     },
                     body
                 });
-
             } catch (error) {
                 console.log(error)
             }
