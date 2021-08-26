@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="google-signin-client_id"
+        content="854714059959-12tp2be184e4sfp3de40p28p9hndubm5.apps.googleusercontent.com">
+    <title>Clona Cartão</title>
+    <link rel="stylesheet" href="static/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="mainBg">
+        <div class="text">
+            <h1 class="title">CARDMY</h1>
+            <p class="subtitle">A melhor plataforma de clonagem de cartão!</p>
+            <div class="logIns">
+                <div class="inputsLogIn2">
+                    <div id="my-signin2"></div>
+                </div>
+                <div class="inputsLogIn">
+                    <input type="text" class="email" id="email" placeholder="Email">
+                    <input type="text" id="password" class="password" placeholder="Password">
+
+                    <a href="#" id="login" class="loginButton1">Log In</a>
+
+                </div>
+
+            </div>
+        </div>
+        <div class="img">
+            <img src="static/img/card.png" alt="cartao" class="cardImg">
+        </div>
+    </div>
+
+    <div class="bgBalls">
+        <div class="bgBall1"></div>
+        <div class="bgBall2"></div>
+    </div>
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="static/js/onSignIn.js"></script>
+    <script src="static/js/signOut.js"></script>
+    <script src="static/js/onSucess.js"></script>
+    <script src="https://apis.google.com/js/platform.js?onload=renderButton" async defer></script>
+    <script>
+        let login = document.getElementById("login"),
+            email = document.getElementById("email"),
+            password = document.getElementById("password")
+
+        login.addEventListener("click", (event) => {
+            (async () => {
+                try {
+                    const body = JSON.stringify({ email: email.value, password: password.value });
+
+                    const res = await fetch("http://localhost:3000/auth/login", {
+                        method: "POST",
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body
+                    });
+
+                    console.log(tokens)
+                } catch (error) {
+                    console.log(error)
+                }
+            })()
+        })
+    </script>
+</body>
+
+</html>
