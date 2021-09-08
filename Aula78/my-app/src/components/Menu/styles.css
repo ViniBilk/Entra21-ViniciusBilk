@@ -1,0 +1,25 @@
+ul li {
+    list-style: none;
+}
+
+.nav-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0px;
+}
+
+.nav-item {
+    text-decoration: none;
+    background-color: white;
+    color: black;
+}
+
+.nav-header li {
+    width: 50%;
+}
+
+.active {
+    background-color: black;
+    color: white;
+}
